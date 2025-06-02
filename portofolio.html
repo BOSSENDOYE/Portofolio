@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momar Bosse Ndoye - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a1a2e 0%, #16213e 50%, #1a252f 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animation de pluie d'étincelles */
+        .sparks-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .spark {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: radial-gradient(circle, #4fc3f7, #03a9f4, #0288d1);
+            border-radius: 50%;
+            animation: sparkfall linear infinite;
+            box-shadow: 0 0 8px #4fc3f7, 0 0 16px #03a9f4;
+        }
+
+        @keyframes sparkfall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Flammes bleues */
+        .flame {
+            position: absolute;
+            width: 2px;
+            height: 40px;
+            background: linear-gradient(to top, #03a9f4, #4fc3f7, transparent);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: flame-dance 3s ease-in-out infinite alternate;
+            opacity: 0.7;
+        }
+
+        @keyframes flame-dance {
+            0% {
+                transform: scaleY(1) scaleX(1) rotate(-2deg);
+            }
+            50% {
+                transform: scaleY(1.2) scaleX(0.8) rotate(2deg);
+            }
+            100% {
+                transform: scaleY(0.9) scaleX(1.1) rotate(-1deg);
+            }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(10, 26, 46, 0.98);
+            box-shadow: 0 2px 20px rgba(79, 195, 247, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4fc3f7;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #4fc3f7;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #4fc3f7;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #ffffff;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Sections */
+        .section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+            padding: 80px 2rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(79, 195, 247, 0.3);
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #4fc3f7, #03a9f4, #0288d1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px rgba(79, 195, 247, 0.5);
+            }
+            to {
+                text-shadow: 0 0 30px rgba(79, 195, 247, 0.8);
+            }
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            color: #4fc3f7;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #b0bec5;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, #03a9f4, #4fc3f7);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(79, 195, 247, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(79, 195, 247, 0.6);
+        }
+
+        /* Cards */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 1rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(79, 195, 247, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            border: 3px solid #4fc3f7;
+            box-shadow: 0 0 20px rgba(79, 195, 247, 0.4);
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-photo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 50%;
+            background: linear-gradient(45deg, rgba(79, 195, 247, 0.2), transparent);
+            z-index: 1;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(79, 195, 247, 0.3);
+            border-color: rgba(79, 195, 247, 0.6);
+        }
+
+        .card h3 {
+            color: #4fc3f7;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: #b0bec5;
+            line-height: 1.6;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        }
+
+        /* Skills */
+        .skill-category {
+            margin-bottom: 2rem;
+        }
+
+        .skill-category h4 {
+            color: #4fc3f7;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: linear-gradient(45deg, #03a9f4, #4fc3f7);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Contact */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(79, 195, 247, 0.1);
+        }
+
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            fill: #4fc3f7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: rgba(10, 26, 46, 0.98);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transform: translateY(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            .nav-links.active {
+                transform: translateY(-100vh);
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section {
+                padding: 60px 1rem 1rem;
+            }
+
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .card {
+                margin: 0.5rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animation de pluie d'étincelles -->
+    <div class="sparks-container" id="sparks"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Momar Bosse Ndoye</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Hero -->
+    <section id="home" class="section">
+        <div class="container">
+            <div class="hero">
+                <div class="profile-photo">
+                    <img src="images/profile.jpg" alt="Momar Bosse Ndoye">
+                </div>
+                <h1>Momar Bosse Ndoye</h1>
+                <h2>Développeur & Expert en IA</h2>
+                <p>Étudiant en analyse de performance digitale passionné par l'intelligence artificielle et l'innovation numérique. Je conçois des solutions intelligentes qui transforment les idées en outils concrets.</p>
+                <a href="#contact" class="cta-button">Me contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #4fc3f7;">À propos de moi</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Profil</h3>
+                    <p>Né le 2 avril 2005 à Rufisque, je suis étudiant à l'Institut Supérieur d'Enseignement Professionnel de Diamniadio. Passionné par l'IA et l'innovation numérique, je combine compétences techniques et esprit créatif pour développer des solutions intelligentes à fort impact.</p>
+                </div>
+                <div class="card">
+                    <h3>Objectif Professionnel</h3>
+                    <p>Concevoir des solutions digitales intelligentes dans les domaines de l'IA, de l'automatisation et des technologies de l'information, tout en renforçant mes compétences en développement logiciel et en science des données.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Réalisations Notables</h3>
+                <p>Auteur d'un ebook sur l'utilisation des prompts IA, illustrant ma capacité à vulgariser des concepts complexes. Stage aux Industries Chimiques du Sénégal (ICS) avec mise en place d'infrastructure réseau industrielle. Participation active aux hackathons et développement de nombreuses applications innovantes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #4fc3f7;">Compétences</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="skill-category">
+                        <h4>Langages de Programmation</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">C</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Frameworks & Bibliothèques</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">Angular</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">Flutter</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="skill-category">
+                        <h4>Intelligence Artificielle</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">scikit-learn</span>
+                            <span class="skill-tag">NLP</span>
+                            <span class="skill-tag">spaCy</span>
+                            <span class="skill-tag">Transformers</span>
+                            <span class="skill-tag">Prompts IA</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Bases de Données</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="skill-category">
+                        <h4>Outils & Technologies</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">WordPress</span>
+                            <span class="skill-tag">PowerPoint</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Marketing Digital</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">SEO/SEA</span>
+                            <span class="skill-tag">Google Ads</span>
+                            <span class="skill-tag">Bing Ads</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #4fc3f7;">Projets</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Ebook - Maîtriser les Prompts en IA</h3>
+                    <p>Rédaction et publication d'un ebook pédagogique destiné aux étudiants et professionnels pour exploiter efficacement les modèles d'IA générative à travers des techniques avancées de création de prompts.</p>
+                </div>
+                <div class="card">
+                    <h3>SmartBétail</h3>
+                    <p>Application de suivi sanitaire du bétail développée avec Flutter et Flask, intégrant l'IA pour le monitoring avec capteurs et géolocalisation.</p>
+                </div>
+                <div class="card">
+                    <h3>e-Élevage</h3>
+                    <p>Plateforme complète de gestion d'élevage avec fonctionnalités de consultation vétérinaire et e-commerce, développée en web et mobile.</p>
+                </div>
+                <div class="card">
+                    <h3>ClaimTrack</h3>
+                    <p>Outil de gestion des plaintes médicales développé avec React.js, intégrant des fonctionnalités de sécurité renforcée pour la protection des données sensibles.</p>
+                </div>
+                <div class="card">
+                    <h3>Anim-Crea</h3>
+                    <p>Système de gestion numérique des cabinets vétérinaires développé avec TypeScript et JavaScript pour optimiser la gestion administrative.</p>
+                </div>
+                <div class="card">
+                    <h3>AgriConnect - Hackathon ISEP 2024</h3>
+                    <p>Application de mise en relation pour les acteurs agricoles avec chatbot multilingue intégré, développée lors du hackathon de l'ISEP.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #4fc3f7;">Contact</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Informations de Contact</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            <span>+221 78 157 62 24</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            <span>Ndoyemomar54@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>Dakar, Sénégal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Certifications</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <h4 style="color: #4fc3f7; margin-bottom: 0.5rem;">Marketing Digital</h4>
+                        <p style="color: #b0bec5;">Certification professionnelle en marketing digital</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #4fc3f7; margin-bottom: 0.5rem;">Intelligence Artificielle</h4>
+                        <p style="color: #b0bec5;">Université Virtuelle Cheikh Hamidou Kane (UVS)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Navigation mobile
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Animation de pluie d'étincelles
+        function createSpark() {
+            const spark = document.createElement('div');
+            spark.className = 'spark';
+            
+            const x = Math.random() * window.innerWidth;
+            const animationDuration = Math.random() * 3 + 2; // Entre 2 et 5 secondes
+            const delay = Math.random() * 2; // Délai aléatoire
+            
+            spark.style.left = x + 'px';
+            spark.style.animationDuration = animationDuration + 's';
+            spark.style.animationDelay = delay + 's';
+            
+            // Taille aléatoire
+            const size = Math.random() * 4 + 2;
+            spark.style.width = size + 'px';
+            spark.style.height = size + 'px';
+            
+            document.getElementById('sparks').appendChild(spark);
+            
+            // Supprimer l'étincelle après l'animation
+            setTimeout(() => {
+                if (spark.parentNode) {
+                    spark.parentNode.removeChild(spark);
+                }
+            }, (animationDuration + delay) * 1000);
+        }
+
+        // Créer des étincelles en continu
+        setInterval(createSpark, 150);
+
+        // Créer des flammes bleues
+        function createFlame() {
+            const flame = document.createElement('div');
+            flame.className = 'flame';
+            
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
+            
+            flame.style.left = x + 'px';
+            flame.style.top = y + 'px';
+            flame.style.animationDelay = Math.random() * 3 + 's';
+            
+            document.getElementById('sparks').appendChild(flame);
+            
+            setTimeout(() => {
+                if (flame.parentNode) {
+                    flame.parentNode.removeChild(flame);
+                }
+            }, 6000);
+        }
+
+        // Créer quelques flammes
+        for (let i = 0; i < 5; i++) {
+            setTimeout(createFlame, i * 1000);
+        }
+        setInterval(createFlame, 3000);
+
+        // Animation d'apparition des éléments
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observer tous les cards
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
