@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Momar Bosse Ndoye - Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <link rel="manifest" href="manifest.json">
     <style>
         * {
             margin: 0;
@@ -190,6 +197,38 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             animation: glow 2s ease-in-out infinite alternate;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.1em;
+        }
+
+        .letter {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(50px) rotateX(90deg);
+            animation: letterAppear 0.8s ease forwards;
+            transition: all 0.3s ease;
+        }
+
+        .letter:hover {
+            transform: translateY(-10px) scale(1.2);
+            text-shadow: 0 0 20px rgba(79, 195, 247, 0.8);
+        }
+
+        @keyframes letterAppear {
+            0% {
+                opacity: 0;
+                transform: translateY(50px) rotateX(90deg);
+            }
+            50% {
+                opacity: 0.5;
+                transform: translateY(-10px) rotateX(45deg);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) rotateX(0deg);
+            }
         }
 
         @keyframes glow {
@@ -248,20 +287,27 @@
             border-radius: 50%;
             margin: 0 auto 2rem;
             border: 3px solid #4fc3f7;
-            box-shadow: 0 0 20px rgba(79, 195, 247, 0.4);
+            box-shadow: 0 0 30px rgba(79, 195, 247, 0.6), 0 0 60px rgba(79, 195, 247, 0.3);
             overflow: hidden;
             position: relative;
-            transition: transform 0.3s ease;
+            transition: all 0.5s ease;
+            animation: profileFloat 6s ease-in-out infinite, profileGlow 3s ease-in-out infinite alternate;
         }
 
         .profile-photo:hover {
-            transform: scale(1.05);
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 0 50px rgba(79, 195, 247, 0.8), 0 0 100px rgba(79, 195, 247, 0.4);
         }
 
         .profile-photo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .profile-photo:hover img {
+            transform: scale(1.1);
         }
 
         .profile-photo::before {
@@ -272,8 +318,160 @@
             right: 0;
             bottom: 0;
             border-radius: 50%;
-            background: linear-gradient(45deg, rgba(79, 195, 247, 0.2), transparent);
+            background: linear-gradient(45deg, rgba(79, 195, 247, 0.3), transparent, rgba(3, 169, 244, 0.3));
             z-index: 1;
+            animation: profileRotate 8s linear infinite;
+        }
+
+        .profile-photo::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            background: linear-gradient(45deg, #4fc3f7, #03a9f4, #0288d1, #4fc3f7) border-box;
+            background-clip: border-box;
+            z-index: -1;
+            animation: borderRotate 4s linear infinite;
+        }
+
+        @keyframes profileFloat {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-10px) rotate(1deg);
+            }
+            50% {
+                transform: translateY(-5px) rotate(0deg);
+            }
+            75% {
+                transform: translateY(-15px) rotate(-1deg);
+            }
+        }
+
+        @keyframes profileGlow {
+            0% {
+                box-shadow: 0 0 30px rgba(79, 195, 247, 0.6), 0 0 60px rgba(79, 195, 247, 0.3);
+            }
+            100% {
+                box-shadow: 0 0 50px rgba(79, 195, 247, 0.8), 0 0 100px rgba(79, 195, 247, 0.5);
+            }
+        }
+
+        @keyframes profileRotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes borderRotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Particules autour du profil */
+        .profile-particles {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, #4fc3f7, #03a9f4);
+            border-radius: 50%;
+            animation: particleOrbit 10s linear infinite;
+        }
+
+        @keyframes particleOrbit {
+            0% {
+                transform: rotate(0deg) translateX(150px) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: rotate(360deg) translateX(150px) rotate(-360deg);
+                opacity: 1;
+            }
+        }
+
+        /* Effets de lumière supplémentaires */
+        .profile-photo .light-effect {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(79, 195, 247, 0.3), transparent);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: lightPulse 2s ease-in-out infinite;
+            z-index: 2;
+        }
+
+        @keyframes lightPulse {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.3;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.5);
+                opacity: 0.1;
+            }
+        }
+
+        /* Effet de halo autour du profil */
+        .profile-halo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 250px;
+            height: 250px;
+            border: 2px solid rgba(79, 195, 247, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: haloRotate 20s linear infinite;
+            z-index: -2;
+        }
+
+        .profile-halo::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border: 1px solid rgba(3, 169, 244, 0.3);
+            border-radius: 50%;
+            animation: haloRotate 15s linear infinite reverse;
+        }
+
+        @keyframes haloRotate {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
         }
 
         .card:hover {
@@ -421,7 +619,9 @@
                 <li><a href="#home">Accueil</a></li>
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#skills">Compétences</a></li>
+                <li><a href="#experience">Expérience</a></li>
                 <li><a href="#projects">Projets</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="menu-toggle" id="menu-toggle">
@@ -437,12 +637,18 @@
         <div class="container">
             <div class="hero">
                 <div class="profile-photo">
+                    <div class="profile-halo"></div>
                     <img src="images/profile.jpg" alt="Momar Bosse Ndoye">
+                    <div class="light-effect"></div>
+                    <div class="profile-particles" id="profile-particles"></div>
                 </div>
-                <h1>Momar Bosse Ndoye</h1>
-                <h2>Développeur Full Stack avec une appétence pour l'IA</h2>
-                <p>Étudiant en analyse de performance digitale passionné par l'intelligence artificielle et l'innovation numérique. Je conçois des solutions intelligentes qui transforment les idées en outils concrets.</p>
-                <a href="#contact" class="cta-button">Me contacter</a>
+                <h1 id="animated-name">Momar Bosse Ndoye</h1>
+                <h2>Développeur Web & Mobile | Spécialiste IA</h2>
+                <p>Étudiant en développement web et mobile à l'ISEP, passionné par la création de solutions digitales innovantes. Expérimenté dans le développement d'applications web et mobiles avec React, Django et Flutter, ainsi que dans l'intelligence artificielle et les technologies de l'information.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <a href="#contact" class="cta-button">Me contacter</a>
+                    <a href="cv.html" target="_blank" class="cta-button" style="background: linear-gradient(45deg, #28a745, #20c997);">👁️ Voir CV</a>
+                </div>
             </div>
         </div>
     </section>
@@ -453,17 +659,17 @@
             <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #4fc3f7;">À propos de moi</h2>
             <div class="grid grid-2">
                 <div class="card">
-                    <h3>Profil</h3>
-                    <p>Né le 2 avril 2005 à Rufisque, je suis étudiant à l'Institut Supérieur d'Enseignement Professionnel de Diamniadio. Passionné par l'IA et l'innovation numérique, je combine compétences techniques et esprit créatif pour développer des solutions intelligentes à fort impact.</p>
+                    <h3>Profil Professionnel</h3>
+                    <p>Étudiant en développement web et mobile à l'Institut Supérieur d'Enseignement Professionnel, passionné par la création de solutions digitales innovantes. Expérimenté dans le développement d'applications web et mobiles avec React, Django et Flutter, ainsi que dans la mise en œuvre de projets académiques en intelligence artificielle et technologies de l'information et de la communication.</p>
                 </div>
                 <div class="card">
                     <h3>Objectif Professionnel</h3>
-                    <p>Concevoir des solutions digitales intelligentes dans les domaines de l'IA, de l'automatisation et des technologies de l'information, tout en renforçant mes compétences en développement logiciel et en science des données.</p>
+                    <p>Ambitieux de contribuer à la digitalisation et à l'optimisation des services grâce à des solutions modernes et performantes. Passionné par l'innovation digitale, l'IA et les technologies web, avec un intérêt particulier pour le développement de solutions pour la santé et l'éducation.</p>
                 </div>
             </div>
             <div class="card">
-                <h3>Réalisations Notables</h3>
-                <p>Auteur d'un ebook sur l'utilisation des prompts IA, illustrant ma capacité à vulgariser des concepts complexes. Stage aux Industries Chimiques du Sénégal (ICS) avec mise en place d'infrastructure réseau industrielle. Participation active aux hackathons et développement de nombreuses applications innovantes.</p>
+                <h3>Centres d'Intérêt</h3>
+                <p>Innovation digitale, IA et technologies web • Développement de solutions pour la santé et l'éducation • Startups et entrepreneuriat tech • Participation active aux hackathons et développement d'applications innovantes</p>
             </div>
         </div>
     </section>
@@ -475,7 +681,7 @@
             <div class="grid">
                 <div class="card">
                     <div class="skill-category">
-                        <h4>Langages de Programmation</h4>
+                        <h4>Langages</h4>
                         <div class="skill-tags">
                             <span class="skill-tag">HTML</span>
                             <span class="skill-tag">CSS</span>
@@ -486,7 +692,7 @@
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h4>Frameworks & Bibliothèques</h4>
+                        <h4>Frameworks</h4>
                         <div class="skill-tags">
                             <span class="skill-tag">React.js</span>
                             <span class="skill-tag">React Native</span>
@@ -499,16 +705,6 @@
                 </div>
                 <div class="card">
                     <div class="skill-category">
-                        <h4>Intelligence Artificielle</h4>
-                        <div class="skill-tags">
-                            <span class="skill-tag">scikit-learn</span>
-                            <span class="skill-tag">NLP</span>
-                            <span class="skill-tag">spaCy</span>
-                            <span class="skill-tag">Transformers</span>
-                            <span class="skill-tag">Prompts IA</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
                         <h4>Bases de Données</h4>
                         <div class="skill-tags">
                             <span class="skill-tag">MySQL</span>
@@ -516,25 +712,78 @@
                             <span class="skill-tag">Firebase</span>
                         </div>
                     </div>
-                </div>
-                <div class="card">
                     <div class="skill-category">
-                        <h4>Outils & Technologies</h4>
+                        <h4>Outils & Automatisation</h4>
                         <div class="skill-tags">
+                            <span class="skill-tag">N8N</span>
                             <span class="skill-tag">Figma</span>
                             <span class="skill-tag">GitHub</span>
                             <span class="skill-tag">WordPress</span>
                             <span class="skill-tag">PowerPoint</span>
                         </div>
                     </div>
+                </div>
+                <div class="card">
                     <div class="skill-category">
-                        <h4>Marketing Digital</h4>
+                        <h4>IA / Data</h4>
                         <div class="skill-tags">
-                            <span class="skill-tag">SEO/SEA</span>
+                            <span class="skill-tag">scikit-learn</span>
+                            <span class="skill-tag">NLP</span>
+                            <span class="skill-tag">spaCy</span>
+                            <span class="skill-tag">Transformers</span>
+                            <span class="skill-tag">Analyse de données</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>SEO/SEA</h4>
+                        <div class="skill-tags">
                             <span class="skill-tag">Google Ads</span>
                             <span class="skill-tag">Bing Ads</span>
                         </div>
                     </div>
+                </div>
+                <div class="card">
+                    <div class="skill-category">
+                        <h4>Bureautique</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Word</span>
+                            <span class="skill-tag">Excel</span>
+                            <span class="skill-tag">PowerPoint</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Langues</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Français (bilingue)</span>
+                            <span class="skill-tag">Anglais (bon niveau)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Expériences -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #4fc3f7;">Expériences Professionnelles</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Stagiaire Développement Web & Mobile</h3>
+                    <h4 style="color: #4fc3f7; margin-bottom: 1rem;">Siribra – Dakar, Sénégal | Juin 2025 – Octobre 2025</h4>
+                    <ul style="color: #b0bec5; line-height: 1.6; padding-left: 1.5rem;">
+                        <li>Conception et développement d'applications web et mobiles</li>
+                        <li>Participation à la planification et à l'architecture des projets</li>
+                        <li>Collaboration avec l'équipe pour assurer la qualité et la performance des solutions livrées</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Stagiaire en Réseaux et Informatique</h3>
+                    <h4 style="color: #4fc3f7; margin-bottom: 1rem;">Industrie Chimique du Sénégal – Thiès, Sénégal | Décembre 2024 – Janvier 2025</h4>
+                    <ul style="color: #b0bec5; line-height: 1.6; padding-left: 1.5rem;">
+                        <li>Conception et configuration de réseaux informatiques</li>
+                        <li>Maintenance et optimisation des infrastructures réseau</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -546,28 +795,51 @@
             <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #4fc3f7;">Projets</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Ebook - Maîtriser les Prompts en IA</h3>
-                    <p>Rédaction et publication d'un ebook pédagogique destiné aux étudiants et professionnels pour exploiter efficacement les modèles d'IA générative à travers des techniques avancées de création de prompts.</p>
+                    <h3>Smart Bétail</h3>
+                    <p><strong>Objectif :</strong> Développer une solution web et mobile pour la gestion complète des élevages, incluant suivi sanitaire, généalogie, géolocalisation et vente d'animaux.</p>
+                    <p><strong>Technologies :</strong> Django REST Framework, React, React Native, PostgreSQL, JWT, Celery, scikit-learn, TensorFlow</p>
+                    <p><strong>Fonctionnalités :</strong> Suivi des animaux (santé, localisation, transactions), historique sanitaire et généalogique, modèles ML pour suivi sanitaire prédictif, notifications et dashboard interactif.</p>
                 </div>
                 <div class="card">
-                    <h3>SmartBétail</h3>
-                    <p>Application de suivi sanitaire du bétail développée avec React et Django, intégrant l'IA pour le monitoring avec capteurs et géolocalisation.</p>
+                    <h3>MaClinique+</h3>
+                    <p><strong>Objectif :</strong> Développement d'une solution complète pour moderniser la gestion des cliniques.</p>
+                    <p><strong>Technologies :</strong> Django 5.1 + Django REST Framework, React 18 + React Router, MySQL, CSS3 avec animations fluides</p>
+                    <p><strong>Fonctionnalités :</strong> Gestion des patients, planification intelligente des rendez-vous, dashboard temps réel, notifications automatiques</p>
                 </div>
                 <div class="card">
-                    <h3>e-Élevage</h3>
-                    <p>Plateforme complète de gestion d'élevage avec fonctionnalités de consultation vétérinaire et e-commerce, développée en web et mobile.</p>
+                    <h3>Prévision Budgétaire Communale</h3>
+                    <p><strong>Objectif :</strong> Prédire les recettes et dépenses annuelles pour chaque commune à partir de séries historiques.</p>
+                    <p><strong>Technologies :</strong> Python, pandas, numpy, scikit-learn, joblib</p>
+                    <p><strong>Méthode :</strong> Import depuis fichier Excel, nettoyage des données, entraînement d'un RandomForestRegressor avec séparation train/test pour chaque commune.</p>
                 </div>
                 <div class="card">
-                    <h3>ClaimTrack</h3>
-                    <p>Outil de gestion des plaintes médicales développé avec Django, intégrant des fonctionnalités de sécurité renforcée pour la protection des données sensibles.</p>
+                    <h3>SamaTerre</h3>
+                    <p><strong>Objectif :</strong> Créer une plateforme web et mobile spécialisée dans l'immobilier de luxe et la vente directe de terrains entre particuliers.</p>
+                    <p><strong>Technologies :</strong> Django, React, React Native, PostgreSQL, Wave (paiement local), JWT, API REST, UI/UX responsive</p>
+                    <p><strong>Fonctionnalités :</strong> Gestion centralisée des annonces et transactions, messagerie interne, système d'évaluation, géolocalisation des biens.</p>
                 </div>
                 <div class="card">
-                    <h3>Anim-Crea</h3>
-                    <p>Système de gestion numérique des cabinets vétérinaires développé avec TypeScript et JavaScript pour optimiser la gestion administrative.</p>
+                    <h3>AgroTrust- Hackathon ISEP 2024</h3>
+                    <p><strong>Objectif :</strong> Application de mise en relation dans le secteur agricole avec chatbot multilingue.</p>
+                    <p><strong>Contexte :</strong> Projet développé lors du Hackathon ISEP 2024</p>
+                    <p><strong>Fonctionnalités :</strong> Mise en relation des acteurs agricoles, chatbot multilingue intégré pour faciliter la communication.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Certifications -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #4fc3f7;">Certifications</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Marketing Digital</h3>
+                    <p style="color: #b0bec5; line-height: 1.6;">Certification professionnelle en marketing digital, couvrant les stratégies de communication digitale, l'optimisation des campagnes publicitaires et l'analyse des performances marketing.</p>
                 </div>
                 <div class="card">
-                    <h3>agroTrust - Hackathon ISEP 2024</h3>
-                    <p>Application de mise en relation pour les acteurs agricoles avec chatbot multilingue intégré, développée lors du hackathon de l'ISEP.</p>
+                    <h3>Intelligence Artificielle</h3>
+                    <p style="color: #b0bec5; line-height: 1.6;">Certification en Intelligence Artificielle obtenue à l'Université Virtuelle de Cheikh Hamidou Kane (UVS), Sénégal. Formation approfondie sur les concepts fondamentaux de l'IA, le machine learning et les applications pratiques.</p>
                 </div>
             </div>
         </div>
@@ -602,14 +874,21 @@
                     </div>
                 </div>
                 <div class="card">
-                    <h3>Certifications</h3>
-                    <div style="margin-bottom: 1rem;">
-                        <h4 style="color: #4fc3f7; margin-bottom: 0.5rem;">Marketing Digital</h4>
-                        <p style="color: #b0bec5;">Certification professionnelle en marketing digital</p>
-                    </div>
-                    <div>
-                        <h4 style="color: #4fc3f7; margin-bottom: 0.5rem;">Intelligence Artificielle</h4>
-                        <p style="color: #b0bec5;">Université Virtuelle Cheikh Hamidou Kane (UVS)</p>
+                    <h3>Informations Personnelles</h3>
+                    <div class="contact-info">
+                        
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            <span>Célibataire</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>Dakar, Sénégal</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -729,6 +1008,41 @@
             card.style.transform = 'translateY(30px)';
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(card);
+        });
+
+        // Animation des lettres du nom
+        function animateName() {
+            const nameElement = document.getElementById('animated-name');
+            const name = nameElement.textContent;
+            nameElement.innerHTML = '';
+            
+            name.split('').forEach((char, index) => {
+                const span = document.createElement('span');
+                span.textContent = char === ' ' ? '\u00A0' : char; // Espace insécable
+                span.className = 'letter';
+                span.style.animationDelay = `${index * 0.1}s`;
+                nameElement.appendChild(span);
+            });
+        }
+
+        // Créer des particules autour du profil
+        function createProfileParticles() {
+            const particlesContainer = document.getElementById('profile-particles');
+            const particleCount = 12;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.animationDelay = `${i * 0.5}s`;
+                particle.style.animationDuration = `${8 + Math.random() * 4}s`;
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Initialiser les animations
+        document.addEventListener('DOMContentLoaded', () => {
+            animateName();
+            createProfileParticles();
         });
     </script>
 </body>

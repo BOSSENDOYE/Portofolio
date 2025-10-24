@@ -1,0 +1,17 @@
+{
+  "name": "Momar Bosse Ndoye - Portfolio",
+  "short_name": "MBN Portfolio",
+  "description": "Portfolio de Momar Bosse Ndoye - Développeur Web & Mobile | Spécialiste IA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a1a2e",
+  "theme_color": "#4fc3f7",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
+
