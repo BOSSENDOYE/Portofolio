@@ -1,0 +1,13 @@
+# Robots.txt pour le portfolio de Momar Bosse Ndoye
+# Développeur Web & Mobile | Spécialiste IA
+
+User-agent: *
+Allow: /
+Disallow: /images/
+
+# Sitemap
+Sitemap: https://www.momarbossendoye.com/sitemap.xml
+
+# Crawl-delay pour les bots respectueux
+Crawl-delay: 1
+
