@@ -10,6 +10,10 @@ body {
     color: #ffffff;
     overflow-x: hidden;
     position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Empêcher le zoom sur double-tap iOS */
+    touch-action: manipulation;
 }
 
 /* Animation de pluie d'étincelles */
@@ -858,11 +862,27 @@ nav.scrolled {
     fill: #4fc3f7;
 }
 
-/* Responsive */
+/* Responsive - Tablette */
+@media (max-width: 1024px) {
+    .hero-split {
+        gap: 3rem;
+    }
+
+    .profile-photo-large {
+        width: 300px;
+        height: 300px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Responsive - Mobile */
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
-        top: 100%;
+        top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
@@ -870,104 +890,254 @@ nav.scrolled {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transform: translateY(-100%);
+        transform: translateX(-100%);
         transition: transform 0.3s ease;
+        z-index: 999;
     }
 
     .nav-links.active {
-        transform: translateY(-100vh);
+        transform: translateX(0);
     }
 
     .menu-toggle {
         display: flex;
+        z-index: 1000;
+    }
+
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        line-height: 1.5;
     }
 
     .section {
-        padding: 60px 1rem 1rem;
+        padding: 80px 1rem 2rem;
+        min-height: auto;
     }
 
     .hero {
         padding: 2rem 1rem;
     }
 
-        .hero-split {
-            flex-direction: column;
-            text-align: center;
-            gap: 2rem;
-        }
+    .hero-split {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
 
-        .hero-content {
-            align-items: center;
-        }
+    .hero-content {
+        align-items: center;
+        text-align: center;
+    }
 
-        .hero-buttons {
-            justify-content: center;
-        }
+    .hero-content h1 {
+        justify-content: center !important;
+    }
 
-        .profile-photo-large {
-            width: 250px;
-            height: 250px;
-        }
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
 
-        .profile-photo-large .profile-halo {
-            width: 300px;
-            height: 300px;
-        }
+    .hero-buttons .cta-button {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
 
-        .profile-photo-large .profile-particles {
-            width: 350px;
-            height: 350px;
-        }
+    .profile-photo-large {
+        width: 220px;
+        height: 220px;
+    }
 
-        .custom-cursor,
-        .cursor-follower {
-            display: none;
-        }
+    .profile-photo-large .profile-halo {
+        width: 270px;
+        height: 270px;
+    }
+
+    .profile-photo-large .profile-particles {
+        width: 320px;
+        height: 320px;
+    }
+
+    .custom-cursor,
+    .cursor-follower {
+        display: none !important;
+    }
 
     .grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .grid-2 {
         grid-template-columns: 1fr;
     }
 
     .page-title {
         font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .card {
+        margin: 0;
+        padding: 1.5rem;
+    }
+
+    .card-icon {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Désactiver les effets de parallaxe sur mobile */
+    .profile-photo-large {
+        transform: none !important;
+    }
+
+    /* Optimiser les animations pour mobile */
+    .fade-in-up {
+        animation-duration: 0.6s;
+    }
+
+    .scroll-reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+    /* Améliorer les boutons sur mobile */
+    .cta-button {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.95rem;
+        touch-action: manipulation;
     }
 }
 
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
+/* Responsive - Petit mobile */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+        line-height: 1.1;
+    }
 
-            .card {
-                margin: 0.5rem;
-                padding: 1.5rem;
-            }
+    .hero h2 {
+        font-size: 1rem;
+    }
 
-            .page-title {
-                font-size: 1.8rem;
-            }
+    .hero p {
+        font-size: 0.9rem;
+    }
 
-            .hero-split {
-                padding: 1.5rem;
-            }
+    .card {
+        margin: 0;
+        padding: 1.2rem;
+    }
 
-            .profile-photo-large {
-                width: 200px;
-                height: 200px;
-            }
+    .page-title {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
 
-            .profile-photo-large .profile-halo {
-                width: 250px;
-                height: 250px;
-            }
+    .hero-split {
+        padding: 1.5rem 0.5rem;
+        gap: 1.5rem;
+    }
 
-            .profile-photo-large .profile-particles {
-                width: 300px;
-                height: 300px;
-            }
-        }
+    .profile-photo-large {
+        width: 180px;
+        height: 180px;
+    }
+
+    .profile-photo-large .profile-halo {
+        width: 220px;
+        height: 220px;
+    }
+
+    .profile-photo-large .profile-particles {
+        width: 260px;
+        height: 260px;
+    }
+
+    .hero-buttons {
+        gap: 0.8rem;
+    }
+
+    .hero-buttons .cta-button {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .nav-links {
+        font-size: 1.1rem;
+    }
+
+    .nav-links a {
+        padding: 1rem;
+    }
+
+    .card-icon {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 70px 0.5rem 1.5rem;
+    }
+
+    .container {
+        padding: 0 0.5rem;
+    }
+}
+
+/* Optimisations tactiles pour mobile */
+@media (hover: none) and (pointer: coarse) {
+    /* Désactiver les effets hover sur mobile */
+    .card-hover-effect::before {
+        display: none;
+    }
+
+    .interactive-btn::before {
+        display: none;
+    }
+
+    /* Augmenter les zones de touch */
+    .cta-button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    .nav-links a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-toggle {
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
 

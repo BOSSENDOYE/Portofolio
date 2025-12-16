@@ -6,6 +6,30 @@ function initNavigation() {
     if (menuToggle && navLinks) {
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+            // Empêcher le scroll du body quand le menu est ouvert
+            if (navLinks.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Fermer le menu quand on clique sur un lien
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Fermer le menu quand on clique en dehors
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
         });
     }
 

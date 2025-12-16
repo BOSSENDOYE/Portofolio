@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
     <!-- SEO Meta Tags -->
     <title>Momar Bosse Ndoye - Développeur Web & Mobile | Spécialiste IA | Portfolio Professionnel</title>
@@ -217,44 +217,48 @@
             scrollObserver.observe(el);
         });
 
-        // Animation de parallaxe pour la photo
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const photo = document.querySelector('.profile-photo-large');
-            if (photo) {
-                const rate = scrolled * 0.3;
-                photo.style.transform = `translateY(${rate}px)`;
-            }
-        });
-
-        // Effet de curseur personnalisé
-        const cursor = document.createElement('div');
-        cursor.className = 'custom-cursor';
-        document.body.appendChild(cursor);
-
-        const cursorFollower = document.createElement('div');
-        cursorFollower.className = 'cursor-follower';
-        document.body.appendChild(cursorFollower);
-
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-            
-            setTimeout(() => {
-                cursorFollower.style.left = e.clientX + 'px';
-                cursorFollower.style.top = e.clientY + 'px';
-            }, 100);
-        });
-
-        // Effet sur les éléments interactifs
-        document.querySelectorAll('.interactive-btn, .card').forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursor.classList.add('cursor-hover');
+        // Animation de parallaxe pour la photo (désactivée sur mobile)
+        if (window.innerWidth > 768) {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const photo = document.querySelector('.profile-photo-large');
+                if (photo) {
+                    const rate = scrolled * 0.3;
+                    photo.style.transform = `translateY(${rate}px)`;
+                }
             });
-            el.addEventListener('mouseleave', () => {
-                cursor.classList.remove('cursor-hover');
+        }
+
+        // Effet de curseur personnalisé (uniquement sur desktop)
+        if (window.innerWidth > 768 && window.matchMedia('(pointer: fine)').matches) {
+            const cursor = document.createElement('div');
+            cursor.className = 'custom-cursor';
+            document.body.appendChild(cursor);
+
+            const cursorFollower = document.createElement('div');
+            cursorFollower.className = 'cursor-follower';
+            document.body.appendChild(cursorFollower);
+
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                
+                setTimeout(() => {
+                    cursorFollower.style.left = e.clientX + 'px';
+                    cursorFollower.style.top = e.clientY + 'px';
+                }, 100);
             });
-        });
+
+            // Effet sur les éléments interactifs
+            document.querySelectorAll('.interactive-btn, .card').forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.classList.add('cursor-hover');
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.classList.remove('cursor-hover');
+                });
+            });
+        }
 
         // Animation de typing pour le titre
         function typeWriter(element, text, speed = 100) {
