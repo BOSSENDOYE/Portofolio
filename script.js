@@ -120,7 +120,12 @@ function animateName() {
     const nameElement = document.getElementById('animated-name');
     if (!nameElement) return;
     
-    const name = nameElement.textContent;
+    // S'assurer que le nom est visible d'abord
+    nameElement.style.opacity = '1';
+    
+    const name = nameElement.textContent.trim();
+    if (!name) return;
+    
     nameElement.innerHTML = '';
     
     name.split('').forEach((char, index) => {
@@ -129,6 +134,8 @@ function animateName() {
         span.className = 'letter';
         span.style.animationDelay = `${index * 0.08}s`;
         span.style.setProperty('--float-delay', `${index * 0.1}s`);
+        // S'assurer que les lettres sont visibles
+        span.style.opacity = '1';
         nameElement.appendChild(span);
     });
     

@@ -125,24 +125,28 @@
     <!-- Section Hero -->
     <section id="home" class="section">
         <div class="container">
-            <div class="hero">
-                <div class="profile-photo">
-                    <div class="profile-halo"></div>
-                    <img src="images/profile.jpg" alt="Momar Bosse Ndoye - Développeur Web & Mobile Expert à Dakar, Sénégal" loading="lazy" width="200" height="200">
-                    <div class="light-effect"></div>
-                    <div class="profile-particles" id="profile-particles"></div>
+            <div class="hero hero-split">
+                <div class="hero-photo-container">
+                    <div class="profile-photo profile-photo-large">
+                        <div class="profile-halo"></div>
+                        <img src="images/profile.jpg" alt="Momar Bosse Ndoye - Développeur Web & Mobile Expert à Dakar, Sénégal" loading="lazy">
+                        <div class="light-effect"></div>
+                        <div class="profile-particles" id="profile-particles"></div>
+                    </div>
                 </div>
-                <h1 id="animated-name">Momar Bosse Ndoye</h1>
-                <h2>Développeur Web & Mobile | Spécialiste IA</h2>
-                <p>Développeur web et mobile expert à Dakar, Sénégal. Spécialisé en développement d'applications web et mobiles avec React, Django et Flutter. Expert en intelligence artificielle, machine learning et développement full stack. Créateur de solutions digitales innovantes pour la santé, l'éducation et l'agriculture.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-                    <a href="contact.html" class="cta-button">Me contacter</a>
-                    <a href="cv.html" target="_blank" class="cta-button" style="background: linear-gradient(45deg, #28a745, #20c997);">👁️ Voir CV</a>
+                <div class="hero-content">
+                    <h1 id="animated-name" class="fade-in-up">Momar Bosse Ndoye</h1>
+                    <h2 class="fade-in-up delay-1">Développeur Web & Mobile | Spécialiste IA</h2>
+                    <p class="fade-in-up delay-2">Développeur web et mobile expert à Dakar, Sénégal. Spécialisé en développement d'applications web et mobiles avec React, Django et Flutter. Expert en intelligence artificielle, machine learning et développement full stack. Créateur de solutions digitales innovantes pour la santé, l'éducation et l'agriculture.</p>
+                    <div class="hero-buttons fade-in-up delay-3">
+                        <a href="contact.html" class="cta-button interactive-btn">Me contacter</a>
+                        <a href="cv.html" target="_blank" class="cta-button interactive-btn" style="background: linear-gradient(45deg, #28a745, #20c997);">👁️ Voir CV</a>
+                    </div>
+                    <div class="hero-buttons fade-in-up delay-4">
+                        <a href="about.html" class="cta-button interactive-btn" style="background: linear-gradient(45deg, #667eea, #764ba2);">En savoir plus</a>
+                        <a href="projects.html" class="cta-button interactive-btn" style="background: linear-gradient(45deg, #f093fb, #f5576c);">Voir mes projets</a>
+                    </div>
                 </div>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-                    <a href="about.html" class="cta-button" style="background: linear-gradient(45deg, #667eea, #764ba2);">En savoir plus</a>
-                    <a href="projects.html" class="cta-button" style="background: linear-gradient(45deg, #f093fb, #f5576c);">Voir mes projets</a>
-            </div>
             </div>
         </div>
     </section>
@@ -150,37 +154,43 @@
     <!-- Section Navigation rapide -->
     <section class="section">
         <div class="container">
-            <h2 class="page-title">Explorez mon portfolio</h2>
+            <h2 class="page-title scroll-reveal">Explorez mon portfolio</h2>
             <div class="grid">
-                <div class="card">
+                <div class="card scroll-reveal card-hover-effect">
+                    <div class="card-icon">👤</div>
                     <h3>À propos</h3>
                     <p>Découvrez mon profil professionnel, mes objectifs et mes centres d'intérêt.</p>
-                    <a href="about.html" class="cta-button" style="margin-top: 1rem; display: inline-block;">En savoir plus</a>
+                    <a href="about.html" class="cta-button interactive-btn" style="margin-top: 1rem; display: inline-block;">En savoir plus</a>
                 </div>
-                <div class="card">
+                <div class="card scroll-reveal card-hover-effect">
+                    <div class="card-icon">💻</div>
                     <h3>Compétences</h3>
                     <p>Explorez mes compétences techniques : langages, frameworks, bases de données et outils.</p>
-                    <a href="skills.html" class="cta-button" style="margin-top: 1rem; display: inline-block;">Voir les compétences</a>
+                    <a href="skills.html" class="cta-button interactive-btn" style="margin-top: 1rem; display: inline-block;">Voir les compétences</a>
                 </div>
-                <div class="card">
+                <div class="card scroll-reveal card-hover-effect">
+                    <div class="card-icon">💼</div>
                     <h3>Expérience</h3>
                     <p>Découvrez mon parcours professionnel et mes expériences de stage.</p>
-                    <a href="experience.html" class="cta-button" style="margin-top: 1rem; display: inline-block;">Voir l'expérience</a>
+                    <a href="experience.html" class="cta-button interactive-btn" style="margin-top: 1rem; display: inline-block;">Voir l'expérience</a>
                 </div>
-                <div class="card">
+                <div class="card scroll-reveal card-hover-effect">
+                    <div class="card-icon">🚀</div>
                     <h3>Projets</h3>
                     <p>Explorez mes projets innovants : Smart Bétail, MaClinique+, SamaTerre et plus encore.</p>
-                    <a href="projects.html" class="cta-button" style="margin-top: 1rem; display: inline-block;">Voir les projets</a>
-                        </div>
-                <div class="card">
+                    <a href="projects.html" class="cta-button interactive-btn" style="margin-top: 1rem; display: inline-block;">Voir les projets</a>
+                </div>
+                <div class="card scroll-reveal card-hover-effect">
+                    <div class="card-icon">🏆</div>
                     <h3>Certifications</h3>
                     <p>Découvrez mes certifications en Marketing Digital et Intelligence Artificielle.</p>
-                    <a href="certifications.html" class="cta-button" style="margin-top: 1rem; display: inline-block;">Voir les certifications</a>
+                    <a href="certifications.html" class="cta-button interactive-btn" style="margin-top: 1rem; display: inline-block;">Voir les certifications</a>
                 </div>
-                <div class="card">
+                <div class="card scroll-reveal card-hover-effect">
+                    <div class="card-icon">📧</div>
                     <h3>Contact</h3>
                     <p>Contactez-moi pour discuter de vos projets ou opportunités de collaboration.</p>
-                    <a href="contact.html" class="cta-button" style="margin-top: 1rem; display: inline-block;">Me contacter</a>
+                    <a href="contact.html" class="cta-button interactive-btn" style="margin-top: 1rem; display: inline-block;">Me contacter</a>
                 </div>
             </div>
         </div>
@@ -188,6 +198,91 @@
 
     <script src="script.js"></script>
     <script>
+        // Animation au scroll avec Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        // Observer tous les éléments avec scroll-reveal
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            scrollObserver.observe(el);
+        });
+
+        // Animation de parallaxe pour la photo
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const photo = document.querySelector('.profile-photo-large');
+            if (photo) {
+                const rate = scrolled * 0.3;
+                photo.style.transform = `translateY(${rate}px)`;
+            }
+        });
+
+        // Effet de curseur personnalisé
+        const cursor = document.createElement('div');
+        cursor.className = 'custom-cursor';
+        document.body.appendChild(cursor);
+
+        const cursorFollower = document.createElement('div');
+        cursorFollower.className = 'cursor-follower';
+        document.body.appendChild(cursorFollower);
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            setTimeout(() => {
+                cursorFollower.style.left = e.clientX + 'px';
+                cursorFollower.style.top = e.clientY + 'px';
+            }, 100);
+        });
+
+        // Effet sur les éléments interactifs
+        document.querySelectorAll('.interactive-btn, .card').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('cursor-hover');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('cursor-hover');
+            });
+        });
+
+        // Animation de typing pour le titre
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.textContent = '';
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Animation au chargement
+        window.addEventListener('load', () => {
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                heroContent.style.opacity = '0';
+                heroContent.style.transform = 'translateY(30px)';
+                setTimeout(() => {
+                    heroContent.style.transition = 'all 1s ease';
+                    heroContent.style.opacity = '1';
+                    heroContent.style.transform = 'translateY(0)';
+                }, 300);
+            }
+        });
     </script>
 </body>
 </html>
