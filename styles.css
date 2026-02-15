@@ -895,6 +895,16 @@ nav.scrolled {
     padding-left: 1.5rem;
 }
 
+.card ul a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.card ul a:hover {
+    text-decoration: underline;
+}
+
 .card-featured {
     border-color: var(--accent-soft);
     background: linear-gradient(135deg, var(--bg-card) 0%, rgba(234, 179, 8, 0.06) 100%);
