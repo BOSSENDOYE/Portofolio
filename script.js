@@ -45,15 +45,36 @@ function initNavigation() {
         }
     });
 
-    // Marquer le lien actif dans la navigation
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    // Marquer le lien actif : ancres (single page) ou page courante
     const navLinksList = document.querySelectorAll('.nav-links a');
-    navLinksList.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-            link.classList.add('active');
+    const firstHref = navLinksList[0] ? navLinksList[0].getAttribute('href') || '' : '';
+    const isSinglePage = firstHref === '#home' || firstHref === '#';
+
+    if (isSinglePage) {
+        function setActiveFromScroll() {
+            const sections = document.querySelectorAll('section[id]');
+            let current = '';
+            const scrollY = window.pageYOffset;
+            sections.forEach(section => {
+                const top = section.offsetTop - 100;
+                const height = section.offsetHeight;
+                if (scrollY >= top && scrollY < top + height) current = section.id;
+            });
+            navLinksList.forEach(link => {
+                const href = link.getAttribute('href');
+                link.classList.toggle('active', href === '#' + current || (current === 'home' && (href === '#' || href === '#home')));
+            });
         }
-    });
+        setActiveFromScroll();
+        window.addEventListener('scroll', setActiveFromScroll);
+        window.addEventListener('hashchange', setActiveFromScroll);
+    } else {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        navLinksList.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentPage || (currentPage === '' && href === 'index.html')) link.classList.add('active');
+        });
+    }
 }
 
 // Animation de pluie d'étincelles
