@@ -1,13 +1,13 @@
-# Robots.txt pour le portfolio de Momar Bosse Ndoye
-# Développeur Web & Mobile | Spécialiste IA
+# Robots.txt — Portfolio de Momar Bosse Ndoye
+# Développeur Full Stack & Entrepreneur Digital — Dakar, Sénégal
 
 User-agent: *
 Allow: /
-Disallow: /images/
+Allow: /images/
+
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /node_modules/
 
 # Sitemap
 Sitemap: https://www.momarbossendoye.com/sitemap.xml
-
-# Crawl-delay pour les bots respectueux
-Crawl-delay: 1
-
