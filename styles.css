@@ -374,7 +374,27 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* Hero visual */
+/* Hero photo mobile */
+.hero-photo-mobile {
+  display: none;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(234, 179, 8, 0.4);
+  box-shadow: 0 0 0 6px rgba(234, 179, 8, 0.1);
+  margin: 0 auto 1.5rem;
+  flex-shrink: 0;
+}
+
+.hero-photo-mobile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* Hero photo desktop */
 .hero-visual {
   display: flex;
   align-items: center;
@@ -1220,6 +1240,7 @@ section { position: relative; z-index: 1; }
     gap: 0;
   }
   .hero-visual { display: none; }
+  .hero-photo-mobile { display: block; }
   .hero-badge { margin-left: auto; margin-right: auto; }
   .hero-subtitle { max-width: 600px; margin-left: auto; margin-right: auto; }
   .hero-chips { justify-content: center; }
