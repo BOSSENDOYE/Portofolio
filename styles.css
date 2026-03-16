@@ -377,21 +377,47 @@ body {
 /* Hero photo mobile */
 .hero-photo-mobile {
   display: none;
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 3px solid rgba(234, 179, 8, 0.4);
-  box-shadow: 0 0 0 6px rgba(234, 179, 8, 0.1);
-  margin: 0 auto 1.5rem;
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 2rem;
   flex-shrink: 0;
 }
 
+.hero-photo-mobile::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    rgba(234, 179, 8, 0.7),
+    transparent 40%,
+    rgba(234, 179, 8, 0.3) 60%,
+    transparent 80%,
+    rgba(234, 179, 8, 0.7)
+  );
+  animation: spin-slow 6s linear infinite;
+}
+
+.hero-photo-mobile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px rgba(234, 179, 8, 0.08);
+}
+
 .hero-photo-mobile img {
+  position: relative;
   width: 100%;
   height: 100%;
+  border-radius: 50%;
   object-fit: cover;
   object-position: top center;
+  border: 3px solid var(--bg);
+  z-index: 1;
+  display: block;
 }
 
 /* Hero photo desktop */
@@ -1221,6 +1247,44 @@ section { position: relative; z-index: 1; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ===== TOUCH DEVICES — désactiver hover transforms ===== */
+@media (hover: none) and (pointer: coarse) {
+  .skill-card:hover,
+  .proj-card:hover,
+  .cert-card:hover,
+  .tl-card:hover,
+  .info-card:hover,
+  .a-tag:hover,
+  .s-tag:hover,
+  .btn-gold:hover,
+  .btn-outline:hover,
+  .nav-cta:hover,
+  .form-btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Garder les couleurs hover actives */
+  .skill-card:hover { border-color: rgba(234, 179, 8, 0.18); }
+  .proj-card:hover { border-color: rgba(234, 179, 8, 0.22); }
+  .cert-card:hover { border-color: rgba(234, 179, 8, 0.22); }
+  .proj-card:hover .proj-card-glow { opacity: 1; }
+  .skill-card:hover .skill-card-accent { transform: scaleX(1); }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
 
 /* ===== RESPONSIVE ===== */
 

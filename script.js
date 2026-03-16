@@ -51,6 +51,9 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 /* ===== SCROLL REVEAL ===== */
+const isMobile = window.innerWidth <= 768;
+
+// Seuil plus bas sur mobile pour déclencher plus tôt
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -58,7 +61,10 @@ const revealObserver = new IntersectionObserver((entries) => {
       revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+}, {
+  threshold: isMobile ? 0.05 : 0.1,
+  rootMargin: isMobile ? '0px 0px -20px 0px' : '0px 0px -60px 0px'
+});
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
