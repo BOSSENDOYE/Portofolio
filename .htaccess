@@ -28,6 +28,16 @@
 # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 # RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
+# Anciennes pages fusionnées dans la page d'accueil (index.html one-page)
+# Redirection 301 pour éviter le contenu dupliqué et concentrer le référencement sur la page d'accueil
+RewriteEngine On
+RewriteRule ^about\.html$ /#about [R=301,L,NE]
+RewriteRule ^skills\.html$ /#skills [R=301,L,NE]
+RewriteRule ^experience\.html$ /#experience [R=301,L,NE]
+RewriteRule ^projects\.html$ /#projects [R=301,L,NE]
+RewriteRule ^certifications\.html$ /#certifications [R=301,L,NE]
+RewriteRule ^contact\.html$ /#contact [R=301,L,NE]
+
 # Pages d'erreur personnalisées
 ErrorDocument 404 /index.html
 
