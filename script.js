@@ -100,3 +100,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
+
+/* ===== CARD SPOTLIGHT ===== */
+document.querySelectorAll('.skill-card, .proj-card').forEach(card => {
+  card.addEventListener('pointermove', (e) => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+    card.style.setProperty('--my', `${e.clientY - r.top}px`);
+  });
+});
+
+/* ===== HERO PHOTO TILT ===== */
+const heroPhoto = document.getElementById('heroPhoto');
+const heroVisual = document.querySelector('.hero-visual');
+if (heroPhoto && heroVisual && window.matchMedia('(hover: hover) and (prefers-reduced-motion: no-preference)').matches) {
+  // wait for the entrance animation before taking over the transform
+  setTimeout(() => {
+    heroPhoto.style.animation = 'none';
+    heroVisual.addEventListener('pointermove', (e) => {
+      const r = heroVisual.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      heroPhoto.style.transform = `perspective(1000px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg)`;
+    });
+    heroVisual.addEventListener('pointerleave', () => {
+      heroPhoto.style.transform = '';
+    });
+  }, 1500);
+}
