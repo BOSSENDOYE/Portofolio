@@ -1,977 +1,632 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-  <title>Momar Bosse Ndoye — Consultant SAP ABAP & Développeur Full Stack | Dakar, Sénégal</title>
-  <meta name="description" content="Momar Bosse Ndoye, Consultant SAP ABAP junior (SAP Fiori) et Développeur Web & Mobile Full Stack à Dakar, Sénégal. Plus de 15 applications clientes en production (cliniques, commerce, SaaS) hébergées sur VPS avec Docker et Nginx. Fondateur de BoutickSen.com.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Momar Bosse Ndoye, consultant SAP ABAP junior et développeur web &amp; mobile full stack à Dakar, Sénégal.">
+    <meta property="og:title" content="Momar Bosse Ndoye — Consultant SAP ABAP &amp; Développeur Full Stack">
+    <meta property="og:description" content="Momar Bosse Ndoye, consultant SAP ABAP junior et développeur web &amp; mobile full stack à Dakar, Sénégal.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://momarbossndoye.onrender.com/">
+    <meta property="og:image" content="https://momarbossndoye.onrender.com/img/momar-bosse-ndoye.jpg">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
-  <!-- Aperçu lors du partage (WhatsApp, LinkedIn, Facebook, X) -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://momarbossndoye.onrender.com/">
-  <meta property="og:title" content="Momar Bosse Ndoye — Consultant SAP ABAP Junior &amp; Développeur Full Stack">
-  <meta property="og:description" content="Consultant SAP ABAP Junior (SAP Fiori) et Développeur Web &amp; Mobile Full Stack à Dakar. Plus de 15 applications clientes en production.">
-  <meta property="og:image" content="https://momarbossndoye.onrender.com/images/profile.jpg">
-  <meta property="og:image:width" content="358">
-  <meta property="og:image:height" content="514">
-  <meta property="og:image:alt" content="Photo de Momar Bosse Ndoye">
-  <meta property="og:locale" content="fr_FR">
-  <meta property="og:site_name" content="Momar Bosse Ndoye">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Momar Bosse Ndoye — Consultant SAP ABAP Junior &amp; Développeur Full Stack">
-  <meta name="twitter:description" content="Consultant SAP ABAP Junior (SAP Fiori) et Développeur Web &amp; Mobile Full Stack à Dakar. Plus de 15 applications clientes en production.">
-  <meta name="twitter:image" content="https://momarbossndoye.onrender.com/images/profile.jpg">
+    <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
+    <link rel="stylesheet" href="css/plugins/swiper.min.css">
+    <link rel="stylesheet" href="css/plugins/fancybox.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Momar Bosse Ndoye — Consultant SAP ABAP &amp; Développeur Full Stack</title>
 
-  <!-- ===== PERFORMANCE & FONTS ===== -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="shortcut icon" href="favicon.svg">
 </head>
+
 <body>
 
-  <!-- Background texture -->
-  <div class="bg-noise" aria-hidden="true"></div>
+    <div class="mil-wrapper" id="top">
 
-  <!-- ===== NAVIGATION ===== -->
-  <nav class="navbar" id="navbar">
-    <a href="#hero" class="nav-logo">
-      <span class="nav-logo-mark">MBN</span>Momar Bosse Ndoye
-    </a>
-    <ul class="nav-links">
-      <li><a href="#about">À propos</a></li>
-      <li><a href="#skills">Compétences</a></li>
-      <li><a href="#experience">Expérience</a></li>
-      <li><a href="#projects">Projets</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="#contact" class="nav-cta">Me contacter</a>
-    <button class="nav-burger" id="burger" aria-label="Menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-
-  <!-- Mobile overlay -->
-  <div class="nav-overlay" id="navOverlay" role="dialog" aria-modal="true">
-    <a href="#about" class="overlay-link">À propos</a>
-    <a href="#skills" class="overlay-link">Compétences</a>
-    <a href="#experience" class="overlay-link">Expérience</a>
-    <a href="#projects" class="overlay-link">Projets</a>
-    <a href="#contact" class="overlay-link">Contact</a>
-  </div>
-
-  <!-- ===== HERO ===== -->
-  <section id="hero" class="hero">
-    <div class="hero-grid" aria-hidden="true"></div>
-    <div class="hero-glow-1" aria-hidden="true"></div>
-    <div class="hero-glow-2" aria-hidden="true"></div>
-
-    <div class="hero-content">
-      <!-- Photo mobile uniquement -->
-      <div class="hero-photo-mobile">
-        <img src="images/profile.jpg" alt="Momar Bosse Ndoye">
-      </div>
-
-      <div class="hero-badge">
-        <div class="badge-pulse"></div>
-        Disponible pour de nouvelles opportunités
-      </div>
-
-      <div class="hero-role">Consultant SAP ABAP Junior · Développeur Full Stack</div>
-
-      <h1 class="hero-title">
-        <span class="line">Momar</span>
-        <span class="line">Bosse <span class="accent">Ndoye</span></span>
-      </h1>
-
-      <p class="hero-subtitle">
-        Consultant SAP ABAP Junior &amp; Développeur Web &amp; Mobile Full Stack. Je développe des applications SAP Fiori avec SAPUI5, des CDS Views et des services OData, ainsi que des applications métier en production pour cliniques, commerces et entreprises.
-      </p>
-
-      <div class="hero-chips">
-        <span class="chip highlight">SAP ABAP</span>
-        <span class="chip highlight">SAP Fiori</span>
-        <span class="chip highlight">Web</span>
-        <span class="chip highlight">Mobile</span>
-        <span class="chip">Docker / Nginx</span>
-        <span class="chip">Fondateur BoutickSen</span>
-        <span class="chip">Dakar, Sénégal</span>
-      </div>
-
-      <div class="hero-actions">
-        <a href="#contact" class="btn-gold">Me contacter <svg class="icon" viewBox="0 0 24 24" style="width:18px;height:18px"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-        <a href="#projects" class="btn-outline">Voir mes projets</a>
-      </div>
-
-      <div class="hero-stats">
-        <div class="h-stat">
-          <div class="h-stat-val">15+</div>
-          <div class="h-stat-lbl">Applis en production</div>
+        <div class="mil-ball">
+            <span class="mil-icon-1">
+                <svg viewBox="0 0 128 128">
+                    <path d="M106.1,41.9c-1.2-1.2-3.1-1.2-4.2,0c-1.2,1.2-1.2,3.1,0,4.2L116.8,61H11.2l14.9-14.9c1.2-1.2,1.2-3.1,0-4.2	c-1.2-1.2-3.1-1.2-4.2,0l-20,20c-1.2,1.2-1.2,3.1,0,4.2l20,20c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9c1.2-1.2,1.2-3.1,0-4.2	L11.2,67h105.5l-14.9,14.9c-1.2,1.2-1.2,3.1,0,4.2c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9l20-20c1.2-1.2,1.2-3.1,0-4.2L106.1,41.9	z" />
+                </svg>
+            </span>
+            <div class="mil-more-text">Voir</div>
+            <div class="mil-choose-text">Choisir</div>
         </div>
-        <div class="h-stat">
-          <div class="h-stat-val">4</div>
-          <div class="h-stat-lbl">Expériences pro</div>
+
+        <div class="mil-preloader">
+            <div class="mil-preloader-animation">
+                <div class="mil-pos-abs mil-animation-1">
+                    <p class="mil-h3 mil-muted mil-thin">Construire</p>
+                    <p class="mil-h3 mil-muted">aujourd'hui.</p>
+                    <p class="mil-h3 mil-muted mil-thin">Impacter demain.</p>
+                </div>
+                <div class="mil-pos-abs mil-animation-2">
+                    <div class="mil-reveal-frame">
+                        <p class="mil-reveal-box"></p>
+                        <p class="mil-h3 mil-muted mil-thin">Momar Bosse Ndoye</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="h-stat">
-          <div class="h-stat-val">5</div>
-          <div class="h-stat-lbl">Certifs &amp; badges</div>
+
+        <div class="mil-progress-track">
+            <div class="mil-progress"></div>
         </div>
-      </div>
+
+        <a href="index.html" class="mil-logo mb-brand"><img src="img/logo-mark.png" alt="Momar Bosse Ndoye" width="220" height="114"></a>
+
+        <div class="mil-menu-frame">
+            <div class="mil-frame-top">
+                <a href="index.html" class="mil-logo"><img src="img/logo-mark.png" alt="Momar Bosse Ndoye" width="220" height="114"></a>
+                <div class="mil-menu-btn">
+                    <span></span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="mil-menu-content">
+                    <div class="row">
+                        <div class="col-xl-5">
+
+                            <nav class="mil-main-menu" id="swupMenu">
+                                <ul>
+                                    <li class="mil-active"><a href="index.html">Accueil</a></li>
+<li><a href="projets.html">Projets</a></li>
+<li><a href="parcours.html">Parcours</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+                                </ul>
+                            </nav>
+
+                        </div>
+                        <div class="col-xl-7">
+
+                            <div class="mil-menu-right-frame">
+                                <div class="mil-animation-in">
+                                    <div class="mil-animation-frame">
+                                        <div class="mil-animation mil-position-1 mil-scale" data-value-1="2" data-value-2="2"></div>
+                                    </div>
+                                </div>
+                                <div class="mil-menu-right">
+                                    <div class="row">
+                                        <div class="col-lg-8 mil-mb-60">
+
+                                            <h6 class="mil-muted mil-mb-30">Projets</h6>
+
+                                            <ul class="mil-menu-list">
+                                                <li><a href="projet-bouticksen.html" class="mil-light-soft">BoutickSen</a></li>
+<li><a href="projet-senbaobab.html" class="mil-light-soft">SenBaobab</a></li>
+<li><a href="projet-clinique-naby.html" class="mil-light-soft">Clinique Naby</a></li>
+<li><a href="projet-la-madone-adn.html" class="mil-light-soft">Clinique La Madone ADN</a></li>
+<li><a href="projet-mouhamed-rassoul.html" class="mil-light-soft">Clinique Mouhamed Rassoul</a></li>
+<li><a href="projet-cabinet-lionel.html" class="mil-light-soft">Cabinet Lionel</a></li>
+
+                                            </ul>
+
+                                        </div>
+                                        <div class="col-lg-4 mil-mb-60">
+
+                                            <h6 class="mil-muted mil-mb-30">Liens</h6>
+
+                                            <ul class="mil-menu-list">
+                                                <li><a href="https://www.linkedin.com/in/momar-bosse-ndoye" target="_blank" rel="noopener" data-no-swup class="mil-light-soft">LinkedIn</a></li>
+                                                <li><a href="https://bouticksen.com" target="_blank" rel="noopener" data-no-swup class="mil-light-soft">BoutickSen</a></li>
+                                                <li><a href="cv.html" data-no-swup class="mil-light-soft">CV</a></li>
+                                                <li><a href="mailto:Bossendoye0@gmail.com" data-no-swup class="mil-light-soft">Email</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                    <div class="mil-divider mil-mb-60"></div>
+                                    <div class="row justify-content-between">
+                                        <div class="col-lg-6 mil-mb-60">
+
+                                            <h6 class="mil-muted mil-mb-30">Dakar, Sénégal</h6>
+
+                                            <p class="mil-light-soft"><a href="mailto:Bossendoye0@gmail.com" data-no-swup class="mil-light-soft">Bossendoye0@gmail.com</a> <span class="mil-no-wrap">+221 78 157 62 24</span></p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mil-curtain"></div>
+
+        <div class="mil-frame">
+            <div class="mil-frame-top">
+                <span class="mb-brand-space"></span>
+                <div class="mil-menu-btn">
+                    <span></span>
+                </div>
+            </div>
+            <div class="mil-frame-bottom">
+                <div class="mil-current-page"></div>
+                <div class="mil-back-to-top">
+                    <a href="#top" class="mil-link mil-dark mil-arrow-place">
+                        <span>Haut de page</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mil-content">
+            <div id="swupMain" class="mil-main-transition">
+
+
+                <section class="mil-banner mil-dark-bg">
+                    <div class="mi-invert-fix">
+                        <div class="mil-animation-frame">
+                            <div class="mil-animation mil-position-1 mil-scale" data-value-1="7" data-value-2="1.6"></div>
+                            <div class="mil-animation mil-position-2 mil-scale" data-value-1="4" data-value-2="1"></div>
+                            <div class="mil-animation mil-position-3 mil-scale" data-value-1="1.2" data-value-2=".1"></div>
+                        </div>
+
+                        <div class="mil-gradient"></div>
+
+                        <div class="container">
+                            <div class="mil-banner-content mil-up">
+
+                                <span class="mb-status"><i></i>Disponible pour de nouvelles opportunités</span>
+
+                                <h1 class="mil-muted mil-mb-60">Construire <span class="mil-thin">aujourd'hui,</span><br> impacter <span class="mil-thin">demain</span></h1>
+                                <div class="row">
+                                    <div class="col-md-7 col-lg-6">
+
+                                        <p class="mil-light-soft mil-mb-60">Consultant SAP ABAP junior et développeur web & mobile full stack à Dakar. Je développe des applications SAP Fiori, ainsi que des applications métier en production pour cliniques, commerces et entreprises.</p>
+
+                                    </div>
+                                </div>
+
+                                <a href="projets.html" class="mil-button mil-arrow-place mil-btn-space">
+                                    <span>Voir mes projets</span>
+                                </a>
+
+                                <a href="contact.html" class="mil-link mil-muted mil-arrow-place">
+                                    <span>Me contacter</span>
+                                </a>
+
+                                <div class="mil-circle-text">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve" class="mil-ct-svg mil-rotate" data-value="360">
+                                        <defs>
+                                            <path id="circlePath" d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 " />
+                                        </defs>
+                                        <circle cx="150" cy="100" r="75" fill="none" />
+                                        <g>
+                                            <use xlink:href="#circlePath" fill="none" />
+                                            <text style="letter-spacing: 6.5px">
+                                                <textPath xlink:href="#circlePath">Découvrir - Découvrir - </textPath>
+                                            </text>
+                                        </g>
+                                    </svg>
+                                    <a href="#about" class="mil-button mil-arrow-place mil-icon-button mil-arrow-down" aria-label="Découvrir"></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="about">
+                    <div class="container mil-p-120-30">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-lg-6 col-xl-6">
+
+                                <div class="mil-mb-90">
+                                    <h2 class="mil-up mil-mb-60">Qui <br><span class="mil-thin">suis-je ?</span></h2>
+                                    <p class="mil-up mil-mb-30">Consultant SAP ABAP junior chez SAB Business Consulting et développeur full stack basé à Dakar, je développe des applications SAP Fiori avec SAPUI5, des modèles de données en CDS Views et des services OData.</p>
+
+                                    <p class="mil-up mil-mb-30">En freelance, je gère un VPS sécurisé qui héberge plus de 15 applications clientes en production, conteneurisées avec Docker et servies par Nginx : plateformes de gestion de cliniques, suite de gestion commerciale, sites web et outils RH.</p>
+
+                                    <p class="mil-up mil-mb-60">Je suis également fondateur de <a href="https://bouticksen.com" target="_blank" rel="noopener" data-no-swup class="mil-accent">BoutickSen</a>, une plateforme SaaS qui permet aux commerçants de créer leur boutique en ligne en 5 minutes. Je recherche un poste stimulant dans une entreprise qui exploite les écosystèmes SAP.</p>
+
+                                    <div class="mb-stats mil-mb-60"><div class="mb-stat mil-up"><span class="mb-stat-n">15+</span><span class="mb-stat-l">Applications en production</span></div><div class="mb-stat mil-up"><span class="mb-stat-n">4</span><span class="mb-stat-l">Expériences professionnelles</span></div><div class="mb-stat mil-up"><span class="mb-stat-n">5</span><span class="mb-stat-l">Certifications & badges</span></div></div>
+
+                                    <div class="mil-up" style="display:flex;flex-wrap:wrap;align-items:center;gap:20px 30px;"><a href="parcours.html" class="mil-button mil-arrow-place"><span>Voir mon parcours</span></a><a href="cv.html" data-no-swup class="mil-link mil-dark mil-arrow-place" id="cv-link"><span>Voir mon CV</span></a></div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-5">
+
+                                <div class="mil-about-photo mil-mb-90">
+                                    <div class="mil-lines-place"></div>
+                                    <div class="mil-up mil-img-frame" style="padding-bottom: 109%;">
+                                        <img src="img/momar-bosse-ndoye.jpg" alt="Portrait de Momar Bosse Ndoye" class="mil-scale" data-value-1="1" data-value-2="1.05">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mil-dark-bg">
+                    <div class="mi-invert-fix">
+                        <div class="mil-animation-frame">
+                            <div class="mil-animation mil-position-1 mil-scale" data-value-1="2.4" data-value-2="1.4" style="top: 300px; right: -100px"></div>
+                            <div class="mil-animation mil-position-2 mil-scale" data-value-1="2" data-value-2="1" style="left: 150px"></div>
+                        </div>
+                        <div class="container mil-p-120-0">
+
+                            <div class="mil-mb-120">
+                                <div class="row">
+                                    <div class="col-lg-10">
+
+                                        <span class="mil-suptitle mil-light-soft mil-suptitle-right mil-up">Des solutions complètes, <br>de l'idée à la mise en production.</span>
+
+                                    </div>
+                                </div>
+
+                                <div class="mil-complex-text justify-content-center mil-up mil-mb-15">
+
+                                    <h2 class="mil-h1 mil-muted mil-center">Ce que je <span class="mil-thin">fais</span></h2>
+
+                                </div>
+                                <div class="mil-complex-text justify-content-center mil-up">
+
+                                    <h2 class="mil-h1 mil-muted mil-center">pour <span class="mil-thin">vous.</span></h2>
+                                    <a href="contact.html" class="mil-services-button mil-button mil-arrow-place"><span>Discutons-en</span></a>
+
+                                </div>
+                            </div>
+
+                            <div class="row mil-services-grid m-0">
+                                <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
+
+                                    <a href="contact.html" class="mil-service-card-sm mil-up">
+                                        <h5 class="mil-muted mil-mb-30">Développement <br>SAP ABAP & Fiori</h5>
+                                        <p class="mil-light-soft mil-mb-30">List reports Fiori, applications SAPUI5, CDS Views et services OData pour les entreprises sur SAP.</p>
+                                        <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
+                                    </a>
+
+                                </div>
+                                <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
+
+                                    <a href="contact.html" class="mil-service-card-sm mil-up">
+                                        <h5 class="mil-muted mil-mb-30">Applications <br>web sur mesure</h5>
+                                        <p class="mil-light-soft mil-mb-30">Plateformes métier, e-commerce et sites vitrines, du back-end au front-end, livrés en production.</p>
+                                        <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
+                                    </a>
+
+                                </div>
+                                <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
+
+                                    <a href="contact.html" class="mil-service-card-sm mil-up">
+                                        <h5 class="mil-muted mil-mb-30">Applications <br>mobiles</h5>
+                                        <p class="mil-light-soft mil-mb-30">Applications React Native et Flutter connectées à vos services et à vos données.</p>
+                                        <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
+                                    </a>
+
+                                </div>
+                                <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
+
+                                    <a href="contact.html" class="mil-service-card-sm mil-up">
+                                        <h5 class="mil-muted mil-mb-30">Hébergement <br>et déploiement</h5>
+                                        <p class="mil-light-soft mil-mb-30">Mise en production sur VPS sécurisé, conteneurisation Docker et service par Nginx.</p>
+                                        <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="projets">
+                    <div class="container mil-portfolio mil-p-120-60">
+                        <div class="row align-items-center mil-mb-30">
+                            <div class="col-lg-6 mil-mb-30">
+                                <h3 class="mil-up">Ce que j'ai <span class="mil-thin">construit</span></h3>
+                            </div>
+                            <div class="col-lg-6 mil-mb-30">
+                                <div class="mil-adaptive-right mil-up">
+                                    <a href="projets.html" class="mil-link mil-dark mil-arrow-place">
+                                        <span>Tous les projets</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-lg-6">
+
+                                <a href="projet-bouticksen.html" class="mil-portfolio-item mil-more mil-mb-60">
+                                    <div class="mil-cover-frame mil-hori mil-up">
+                                        <div class="mil-cover">
+                                            <img src="img/projets/bouticksen.jpg" alt="Aperçu du projet BoutickSen" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="mil-descr">
+                                        <div class="mil-labels mil-up mil-mb-15">
+                                            <div class="mil-label mil-upper mil-accent">SaaS</div>
+                                            <div class="mil-label mil-upper">E-commerce</div>
+                                        </div>
+                                        <h4 class="mil-up">BoutickSen</h4>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="col-lg-6">
+
+                                <a href="projet-senbaobab.html" class="mil-portfolio-item mil-more mil-parallax mil-mb-60" data-value-1="60" data-value-2="-60">
+                                    <div class="mil-cover-frame mil-hori mil-up">
+                                        <div class="mil-cover">
+                                            <img src="img/projets/senbaobab.jpg" alt="Aperçu du projet SenBaobab" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="mil-descr">
+                                        <div class="mil-labels mil-up mil-mb-15">
+                                            <div class="mil-label mil-upper mil-accent">Gestion</div>
+                                            <div class="mil-label mil-upper">Commerce</div>
+                                        </div>
+                                        <h4 class="mil-up">SenBaobab</h4>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="col-lg-6">
+
+                                <a href="projet-clinique-naby.html" class="mil-portfolio-item mil-more mil-mb-60">
+                                    <div class="mil-cover-frame mil-hori mil-up">
+                                        <div class="mil-cover">
+                                            <img src="img/projets/clinique-naby.jpg" alt="Aperçu du projet Clinique Naby" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="mil-descr">
+                                        <div class="mil-labels mil-up mil-mb-15">
+                                            <div class="mil-label mil-upper mil-accent">Santé</div>
+                                            <div class="mil-label mil-upper">Santé</div>
+                                        </div>
+                                        <h4 class="mil-up">Clinique Naby</h4>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="col-lg-6">
+
+                                <a href="projet-thiam-streetwear.html" class="mil-portfolio-item mil-more mil-parallax mil-mb-60" data-value-1="60" data-value-2="-60">
+                                    <div class="mil-cover-frame mil-hori mil-up">
+                                        <div class="mil-cover">
+                                            <img src="img/projets/thiam-streetwear.jpg" alt="Aperçu du projet Thiam Streetwear" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="mil-descr">
+                                        <div class="mil-labels mil-up mil-mb-15">
+                                            <div class="mil-label mil-upper mil-accent">E-commerce</div>
+                                            <div class="mil-label mil-upper">Mode</div>
+                                        </div>
+                                        <h4 class="mil-up">Thiam Streetwear</h4>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="mil-soft-bg">
+                    <div class="container mil-p-120-120">
+                        <p class="mil-center mil-up mil-mb-60 mil-upper">Ils m'ont fait confiance</p>
+                        <div class="swiper-container mil-infinite-show mil-up">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><span class="mb-client">SAB Business Consulting</span></div>
+                                <div class="swiper-slide"><span class="mb-client">Clinique Naby</span></div>
+                                <div class="swiper-slide"><span class="mb-client">Clinique La Madone ADN</span></div>
+                                <div class="swiper-slide"><span class="mb-client">SenBaobab</span></div>
+                                <div class="swiper-slide"><span class="mb-client">Clinique Mouhamed Rassoul</span></div>
+                                <div class="swiper-slide"><span class="mb-client">Cabinet Lionel</span></div>
+                                <div class="swiper-slide"><span class="mb-client">Boucherie Daaradji</span></div>
+                                <div class="swiper-slide"><span class="mb-client">Talent Connect</span></div>
+                                <div class="swiper-slide"><span class="mb-client">TICM Groupe</span></div>
+                                <div class="swiper-slide"><span class="mb-client">Thiam Streetwear</span></div>
+                                <div class="swiper-slide"><span class="mb-client">Billetterie CJICS</span></div>
+                                <div class="swiper-slide"><span class="mb-client">Siribra</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="mil-soft-bg">
+                    <div class="container mil-p-120-120">
+                        <div class="row">
+                            <div class="col-lg-10">
+
+                                <span class="mil-suptitle mil-suptitle-right mil-suptitle-dark mil-up">Vous avez un projet en tête ? Une idée à développer ? <br>Je serai ravi d'en échanger avec vous.</span>
+
+                            </div>
+                        </div>
+                        <div class="mil-center">
+                            <h2 class="mil-up mil-mb-60">Travaillons <span class="mil-thin">ensemble</span></h2>
+                            <div class="mil-up"><a href="contact.html" class="mil-button mil-arrow-place"><span>Me contacter</span></a></div>
+                        </div>
+                    </div>
+                </section>
+
+                <footer class="mil-dark-bg">
+                    <div class="mi-invert-fix">
+                        <div class="container mil-p-120-60">
+                            <div class="row justify-content-between">
+                                <div class="col-md-5 col-lg-5 mil-mb-60">
+
+                                    <img src="img/logo-full.jpg" alt="Momar Bosse Ndoye, développeur full-stack. Construire aujourd'hui. Impacter demain." class="mb-footer-logo mil-up" width="240" height="240" loading="lazy">
+
+                                </div>
+                                <div class="col-md-3 col-lg-3 mil-mb-60">
+
+                                    <nav class="mil-footer-menu">
+                                        <ul>
+                                            <li class="mil-up"><a href="index.html">Accueil</a></li>
+                                            <li class="mil-up"><a href="projets.html">Projets</a></li>
+                                            <li class="mil-up"><a href="parcours.html">Parcours</a></li>
+                                            <li class="mil-up"><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+
+                                </div>
+                                <div class="col-md-4 col-lg-3 mil-mb-60">
+
+                                    <h6 class="mil-muted mil-up mil-mb-30">Dakar, Sénégal</h6>
+
+                                    <p class="mil-light-soft mil-up"><a href="mailto:Bossendoye0@gmail.com" data-no-swup class="mil-light-soft">Bossendoye0@gmail.com</a><br><a href="tel:+221781576224" data-no-swup class="mil-light-soft mil-no-wrap">+221 78 157 62 24</a></p>
+
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col-md-6 mil-mb-60">
+                                    <ul class="mil-social-icons mil-up">
+                                        <li><a href="https://www.linkedin.com/in/momar-bosse-ndoye" target="_blank" rel="noopener" data-no-swup class="social-icon" aria-label="LinkedIn"> <i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="mailto:Bossendoye0@gmail.com" data-no-swup class="social-icon" aria-label="Email"> <i class="far fa-envelope"></i></a></li>
+                                        <li><a href="tel:+221781576224" data-no-swup class="social-icon" aria-label="Téléphone"> <i class="fas fa-phone"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 mil-mb-60">
+                                    <p class="mil-light-soft mil-up mb-right">© 2026 Momar Bosse Ndoye. Tous droits réservés.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+
+                <!-- hidden elements -->
+                <div class="mil-hidden-elements">
+                    <div class="mil-dodecahedron">
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="mil-arrow">
+                        <path d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z" />
+                    </svg>
+
+                    <svg width="250" viewBox="0 0 300 1404" fill="none" xmlns="http://www.w3.org/2000/svg" class="mil-lines">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1 892L1 941H299V892C299 809.71 232.29 743 150 743C67.7096 743 1 809.71 1 892ZM0 942H300V892C300 809.157 232.843 742 150 742C67.1573 742 0 809.157 0 892L0 942Z" class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M299 146V97L1 97V146C1 228.29 67.7096 295 150 295C232.29 295 299 228.29 299 146ZM300 96L0 96V146C0 228.843 67.1573 296 150 296C232.843 296 300 228.843 300 146V96Z" class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M299 1H1V1403H299V1ZM0 0V1404H300V0H0Z" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M150 -4.37115e-08L150 1404L149 1404L149 0L150 -4.37115e-08Z" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M150 1324C232.29 1324 299 1257.29 299 1175C299 1092.71 232.29 1026 150 1026C67.7096 1026 1 1092.71 1 1175C1 1257.29 67.7096 1324 150 1324ZM150 1325C232.843 1325 300 1257.84 300 1175C300 1092.16 232.843 1025 150 1025C67.1573 1025 0 1092.16 0 1175C0 1257.84 67.1573 1325 150 1325Z" class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M300 1175H0V1174H300V1175Z" class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M150 678C232.29 678 299 611.29 299 529C299 446.71 232.29 380 150 380C67.7096 380 1 446.71 1 529C1 611.29 67.7096 678 150 678ZM150 679C232.843 679 300 611.843 300 529C300 446.157 232.843 379 150 379C67.1573 379 0 446.157 0 529C0 611.843 67.1573 679 150 679Z" class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M299 380H1V678H299V380ZM0 379V679H300V379H0Z" class="mil-move" />
+                    </svg>
+                </div>
+                <!-- hidden elements end -->
+
+            </div>
+        </div>
     </div>
 
-    <div class="hero-visual" aria-hidden="true">
-      <div class="hero-photo-wrap" id="heroPhoto">
-        <div class="hero-photo-glow"></div>
-        <div class="hero-orbit">
-          <div class="orbit-line"></div>
-          <div class="orbit-spin">
-            <div class="orbit-item" style="--a:-30deg"><span class="orbit-upright"><span class="orbit-chip">SAP ABAP</span></span></div>
-            <div class="orbit-item" style="--a:30deg"><span class="orbit-upright"><span class="orbit-chip">Docker</span></span></div>
-            <div class="orbit-item" style="--a:90deg"><span class="orbit-upright"><span class="orbit-chip">React</span></span></div>
-            <div class="orbit-item" style="--a:150deg"><span class="orbit-upright"><span class="orbit-chip">SAP Fiori</span></span></div>
-            <div class="orbit-item" style="--a:210deg"><span class="orbit-upright"><span class="orbit-chip">Django</span></span></div>
-            <div class="orbit-item" style="--a:270deg"><span class="orbit-upright"><span class="orbit-chip">Laravel</span></span></div>
-          </div>
-        </div>
-        <div class="hero-photo-ring"></div>
-        <div class="hero-photo-inner">
-          <img src="images/profile.jpg" alt="Momar Bosse Ndoye" loading="eager">
-        </div>
+    <!-- jQuery js -->
+    <script src="js/plugins/jquery.min.js"></script>
+    <!-- swup js -->
+    <script src="js/plugins/swup.min.js"></script>
+    <!-- swiper js -->
+    <script src="js/plugins/swiper.min.js"></script>
+    <!-- fancybox js -->
+    <script src="js/plugins/fancybox.min.js"></script>
+    <!-- gsap js -->
+    <script src="js/plugins/gsap.min.js"></script>
+    <!-- scroll smoother -->
+    <script src="js/plugins/smooth-scroll.js"></script>
+    <!-- scroll trigger js -->
+    <script src="js/plugins/ScrollTrigger.min.js"></script>
+    <!-- scroll to js -->
+    <script src="js/plugins/ScrollTo.min.js"></script>
+    <!-- ashley js -->
+    <script src="js/main.js"></script>
 
-        <div class="hero-card hero-card-a">
-          <div class="card-a-inner">
-            <div class="card-a-icon"><svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
-            <div class="card-a-text">
-              <small>Actuellement</small>
-              <strong>Consultant SAP Junior</strong>
-              <span>SAB Business Consulting</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-card hero-card-b">
-          <div class="card-b-inner">
-            <div class="card-b-num">15+</div>
-            <span class="card-b-lbl">Applis en prod</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CLIENTS ===== -->
-  <section class="clients" aria-label="Clients et entreprises">
-    <p class="clients-label">Ils m'ont fait confiance</p>
-    <div class="clients-track">
-      <ul class="clients-list">
-        <li>SAB Business Consulting</li>
-        <li>Clinique Naby</li>
-        <li>Clinique La Madone ADN</li>
-        <li>SenBaobab</li>
-        <li>Clinique Mouhamed Rassoul</li>
-        <li>Cabinet Lionel</li>
-        <li>Boucherie Daaradji</li>
-        <li>Talent Connect</li>
-        <li>TICM Groupe</li>
-        <li>Thiam Streetwear</li>
-        <li>Billetterie CJICS</li>
-        <li>Siribra</li>
-        <li aria-hidden="true">SAB Business Consulting</li>
-        <li aria-hidden="true">Clinique Naby</li>
-        <li aria-hidden="true">Clinique La Madone ADN</li>
-        <li aria-hidden="true">SenBaobab</li>
-        <li aria-hidden="true">Clinique Mouhamed Rassoul</li>
-        <li aria-hidden="true">Cabinet Lionel</li>
-        <li aria-hidden="true">Boucherie Daaradji</li>
-        <li aria-hidden="true">Talent Connect</li>
-        <li aria-hidden="true">TICM Groupe</li>
-        <li aria-hidden="true">Thiam Streetwear</li>
-        <li aria-hidden="true">Billetterie CJICS</li>
-        <li aria-hidden="true">Siribra</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ===== ABOUT ===== -->
-  <section id="about">
-    <div class="section-wrap alt">
-      <div class="about-grid">
-
-        <div class="reveal">
-          <div class="s-label">À propos</div>
-          <h2 class="s-title">Qui suis-je ?</h2>
-          <div class="about-info-cards">
-            <div class="info-card">
-              <div class="info-card-label">Nom complet</div>
-              <div class="info-card-val">Momar Bosse Ndoye</div>
-            </div>
-            <div class="info-card">
-              <div class="info-card-label">Localisation</div>
-              <div class="info-card-val">Dakar, Sénégal</div>
-            </div>
-            <div class="info-card">
-              <div class="info-card-label">Poste actuel</div>
-              <div class="info-card-val">Consultant SAP Junior</div>
-            </div>
-            <div class="info-card">
-              <div class="info-card-label">Langues</div>
-              <div class="info-card-val">Français, Anglais</div>
-            </div>
-            <div class="info-card">
-              <div class="info-card-label">Email</div>
-              <div class="info-card-val">Bossendoye0@gmail.com</div>
-            </div>
-            <div class="info-card">
-              <div class="info-card-label">Téléphone</div>
-              <div class="info-card-val">+221 78 157 62 24</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="reveal reveal-delay-2">
-          <p class="about-bio">
-            Consultant SAP ABAP junior chez SAB Business Consulting et développeur Full Stack basé à Dakar, je développe des applications SAP Fiori avec SAPUI5, des modèles de données en CDS Views et des services OData.
-          </p>
-          <p class="about-bio">
-            En freelance, je gère un VPS sécurisé qui héberge plus de 15 applications clientes en production, conteneurisées avec Docker et servies par Nginx : plateformes de gestion de cliniques, suite de gestion commerciale, sites web et outils RH. Je travaille en back-end comme en front-end (JavaScript, Python, PHP) et je mène le développement de modules web, mobiles et ERP de bout en bout.
-          </p>
-          <p class="about-bio">
-            Je suis également fondateur de <a href="https://bouticksen.com" target="_blank" rel="noopener noreferrer">BoutickSen</a>, une plateforme SaaS qui permet aux commerçants de créer leur boutique en ligne en 5 minutes, avec paiements Wave et Orange Money. Je recherche un poste stimulant dans une entreprise qui exploite les écosystèmes SAP.
-          </p>
-
-          <blockquote class="about-quote">
-            "Construire aujourd'hui, impacter demain."
-          </blockquote>
-
-          <div class="about-tags">
-            <span class="a-tag">Créatif</span>
-            <span class="a-tag">Rigoureux</span>
-            <span class="a-tag">Entrepreneur</span>
-            <span class="a-tag">Curieux</span>
-            <span class="a-tag">Autonome</span>
-            <span class="a-tag">Leader</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SKILLS ===== -->
-  <section id="skills">
-    <div class="section-wrap">
-      <div class="skills-header">
-        <div>
-          <div class="s-label">Compétences</div>
-          <h2 class="s-title">Mon stack technique</h2>
-        </div>
-        <p class="s-desc">Un ensemble polyvalent d'outils et de technologies pour créer des solutions complètes, de l'idée à la mise en production.</p>
-      </div>
-
-      <div class="skills-grid">
-
-        <div class="skill-card reveal">
-          <div class="skill-card-accent"></div>
-          <div class="skill-head">
-            <div class="skill-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-            <h3 class="skill-title">Langages</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="s-tag">HTML5</span>
-            <span class="s-tag">CSS3</span>
-            <span class="s-tag">JavaScript</span>
-            <span class="s-tag">TypeScript</span>
-            <span class="s-tag">Python</span>
-            <span class="s-tag">PHP</span>
-            <span class="s-tag">C</span>
-            <span class="s-tag">ABAP</span>
-          </div>
-        </div>
-
-        <div class="skill-card reveal reveal-delay-1">
-          <div class="skill-card-accent"></div>
-          <div class="skill-head">
-            <div class="skill-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 10 5-10 5L2 7l10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg></div>
-            <h3 class="skill-title">Frameworks & Librairies</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="s-tag">React.js</span>
-            <span class="s-tag">React Native</span>
-            <span class="s-tag">Angular</span>
-            <span class="s-tag">Django</span>
-            <span class="s-tag">Flask</span>
-            <span class="s-tag">Flutter</span>
-            <span class="s-tag">Symfony</span>
-            <span class="s-tag">Laravel</span>
-          </div>
-        </div>
-
-        <div class="skill-card reveal reveal-delay-2">
-          <div class="skill-card-accent"></div>
-          <div class="skill-head">
-            <div class="skill-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg></div>
-            <h3 class="skill-title">Bases de données</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="s-tag">MySQL</span>
-            <span class="s-tag">PostgreSQL</span>
-            <span class="s-tag">Firebase</span>
-          </div>
-        </div>
-
-        <div class="skill-card featured reveal">
-          <div class="skill-card-accent"></div>
-          <div class="skill-head">
-            <div class="skill-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg></div>
-            <h3 class="skill-title">ERP SAP</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="s-tag">SAP ABAP</span>
-            <span class="s-tag">SAP Fiori</span>
-            <span class="s-tag">List reports</span>
-            <span class="s-tag">SAPUI5</span>
-            <span class="s-tag">Fiori Elements</span>
-            <span class="s-tag">CAP</span>
-            <span class="s-tag">OData V4</span>
-            <span class="s-tag">OData Services</span>
-            <span class="s-tag">ABAP CDS Views</span>
-          </div>
-        </div>
-
-        <div class="skill-card reveal reveal-delay-1">
-          <div class="skill-card-accent"></div>
-          <div class="skill-head">
-            <div class="skill-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></svg></div>
-            <h3 class="skill-title">Infrastructure</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="s-tag">Docker</span>
-            <span class="s-tag">Nginx</span>
-            <span class="s-tag">Administration VPS</span>
-            <span class="s-tag">Hostinger</span>
-          </div>
-        </div>
-
-        <div class="skill-card reveal reveal-delay-2">
-          <div class="skill-card-accent"></div>
-          <div class="skill-head">
-            <div class="skill-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></svg></div>
-            <h3 class="skill-title">IA & Data Science</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="s-tag">scikit-learn</span>
-            <span class="s-tag">NLP</span>
-            <span class="s-tag">spaCy</span>
-            <span class="s-tag">Transformers</span>
-            <span class="s-tag">Data Analysis</span>
-          </div>
-        </div>
-
-        <div class="skill-card reveal">
-          <div class="skill-card-accent"></div>
-          <div class="skill-head">
-            <div class="skill-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-            <h3 class="skill-title">Outils & Automation</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="s-tag">N8N</span>
-            <span class="s-tag">Figma</span>
-            <span class="s-tag">GitHub</span>
-            <span class="s-tag">WordPress</span>
-          </div>
-        </div>
-
-        <div class="skill-card reveal reveal-delay-1">
-          <div class="skill-card-accent"></div>
-          <div class="skill-head">
-            <div class="skill-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
-            <h3 class="skill-title">Marketing Digital</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="s-tag">SEO</span>
-            <span class="s-tag">SEA</span>
-            <span class="s-tag">Google Ads</span>
-            <span class="s-tag">Bing Ads</span>
-            <span class="s-tag">Branding</span>
-          </div>
-        </div>
-
-        <div class="skill-card reveal reveal-delay-2">
-          <div class="skill-card-accent"></div>
-          <div class="skill-head">
-            <div class="skill-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-            <h3 class="skill-title">Langues</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="s-tag">Français — langue maternelle</span>
-            <span class="s-tag">Anglais — bon niveau opérationnel</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== EXPERIENCE ===== -->
-  <section id="experience">
-    <div class="section-wrap alt">
-      <div class="exp-head">
-      <div class="s-label">Expérience professionnelle</div>
-      <h2 class="s-title">Mon parcours</h2>
-      <p class="s-desc">Du conseil SAP au développement freelance d'applications en production, en passant par deux stages en développement et en infrastructure IT.</p>
-      </div>
-
-      <div class="timeline">
-
-        <div class="tl-item current">
-          <div class="tl-card reveal">
-            <div class="tl-period">Juillet 2026 — Présent <span class="tl-now">En cours</span></div>
-            <h3 class="tl-role">Consultant SAP Junior</h3>
-            <div class="tl-company">
-              <span>SAB Business Consulting</span>
-              <div class="tl-sep"></div>
-              <span>Dakar, Sénégal</span>
-              <div class="tl-sep"></div>
-              <span class="tl-type">Stage</span>
-            </div>
-            <ul class="tl-tasks">
-              <li>Développement de list reports avec SAP Fiori</li>
-              <li>Développement SAP ABAP au sein de l'équipe de consulting</li>
-              <li>Développement et optimisation de requêtes complexes et de modèles de données modernes via les CDS Views (Core Data Services)</li>
-              <li>Conception, exposition et maintenance d'API de communication via les services OData</li>
-              <li>Développement d'applications et de requêtes personnalisées sur l'interface SAP Fiori en exploitant le framework SAPUI5</li>
-            </ul>
-          </div>
-          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-          <div class="tl-spacer"></div>
-        </div>
-
-        <div class="tl-item current">
-          <div class="tl-spacer"></div>
-          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-          <div class="tl-card reveal">
-            <div class="tl-period">Décembre 2025 — Présent <span class="tl-now">En cours</span></div>
-            <h3 class="tl-role">Développeur Web Full Stack</h3>
-            <div class="tl-company">
-              <span>Secteur médical et commercial</span>
-              <div class="tl-sep"></div>
-              <span>Sénégal</span>
-              <div class="tl-sep"></div>
-              <span class="tl-type">Freelance</span>
-            </div>
-            <ul class="tl-tasks">
-              <li>Gestion et optimisation d'un VPS Hostinger sécurisé hébergeant plus de 15 applications clientes en production</li>
-              <li>Conteneurisation des applications avec Docker et Nginx, pour une disponibilité maximale</li>
-              <li>Plateformes de gestion pour cliniques : facturation, laboratoire, RH, comptabilité, rendez-vous et suivi patient</li>
-              <li>Suite de gestion commerciale SenBaobab et SaaS e-commerce BoutickSen</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-card reveal">
-            <div class="tl-period">Juin 2025 — Octobre 2025</div>
-            <h3 class="tl-role">Stagiaire Développement Web & Mobile</h3>
-            <div class="tl-company">
-              <span>Siribra</span>
-              <div class="tl-sep"></div>
-              <span>Dakar, Sénégal</span>
-              <div class="tl-sep"></div>
-              <span class="tl-type">Stage</span>
-            </div>
-            <ul class="tl-tasks">
-              <li>Participation à la conception et au développement d'applications web et mobiles au sein de l'équipe de développement</li>
-            </ul>
-          </div>
-          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-          <div class="tl-spacer"></div>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-spacer"></div>
-          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-          <div class="tl-card reveal">
-            <div class="tl-period">Décembre 2024 — Janvier 2025</div>
-            <h3 class="tl-role">Stagiaire Réseaux & Informatique</h3>
-            <div class="tl-company">
-              <span>Industrie Chimique du Sénégal</span>
-              <div class="tl-sep"></div>
-              <span>Thiès</span>
-              <div class="tl-sep"></div>
-              <span class="tl-type">Stage</span>
-            </div>
-            <ul class="tl-tasks">
-              <li>Contribution à la maintenance de l'infrastructure réseau et des systèmes informatiques de l'entreprise</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PROJECTS ===== -->
-  <section id="projects">
-    <div class="section-wrap">
-      <div class="projects-header">
-        <div>
-          <div class="s-label">Projets</div>
-          <h2 class="s-title">Ce que j'ai construit</h2>
-        </div>
-        <p class="s-desc">Des solutions concrètes qui répondent à de vraies problématiques africaines et internationales.</p>
-      </div>
-
-      <div class="projects-grid">
-
-        <!-- Featured projects -->
-        <div class="proj-card wide reveal">
-          <div class="proj-card-glow"></div>
-          <div class="proj-visual" aria-hidden="true">
-            <div class="pv-bar"><span></span><span></span><span></span><em>bouticksen.com</em></div>
-            <div class="pv-body">
-              <div class="pv-side"><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="pv-main">
-                <div class="pv-kpis"><i></i><i></i><i></i></div>
-                <div class="pv-chart"><b style="height:40%"></b><b style="height:65%"></b><b style="height:50%"></b><b style="height:80%"></b><b style="height:60%"></b><b style="height:95%"></b><b style="height:75%"></b></div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="proj-top"><span class="proj-num">01</span><span class="proj-domain">bouticksen.com</span></div>
-            <h3 class="proj-title">BoutickSen <span class="proj-badge">Fondateur</span></h3>
-            <p class="proj-desc">Plateforme SaaS qui permet aux commerçants de créer leur boutique en ligne en 5 minutes, sans passer par un développeur. Gestion des produits et des commandes, paiements Wave et Orange Money.</p>
-            <div class="proj-stack">
-              <span class="p-tag">SaaS</span>
-              <span class="p-tag">E-commerce</span>
-              <span class="p-tag">Wave</span>
-              <span class="p-tag">Orange Money</span>
-            </div>
-          <div class="proj-links">
-              <a href="https://bouticksen.com" target="_blank" rel="noopener noreferrer" class="proj-link">Voir le site en ligne</a>
-          </div>
-          </div>
-        </div>
-
-        <div class="proj-card wide reveal">
-          <div class="proj-card-glow"></div>
-          <div class="proj-visual" aria-hidden="true">
-            <div class="pv-bar"><span></span><span></span><span></span><em>senbaobab.com</em></div>
-            <div class="pv-body">
-              <div class="pv-side"><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="pv-main">
-                <div class="pv-kpis"><i></i><i></i><i></i></div>
-                <div class="pv-chart"><b style="height:40%"></b><b style="height:65%"></b><b style="height:50%"></b><b style="height:80%"></b><b style="height:60%"></b><b style="height:95%"></b><b style="height:75%"></b></div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="proj-top"><span class="proj-num">02</span><span class="proj-domain">senbaobab.com</span></div>
-            <h3 class="proj-title">SenBaobab</h3>
-            <p class="proj-desc">Suite de gestion commerciale : point de vente, gestion des stocks, CRM et fidélité, module restaurant, comptabilité SYSCOHADA, PWA utilisable hors ligne et paiements Mobile Money.</p>
-            <div class="proj-stack">
-              <span class="p-tag">Point de vente</span>
-              <span class="p-tag">Stocks</span>
-              <span class="p-tag">CRM</span>
-              <span class="p-tag">SYSCOHADA</span>
-              <span class="p-tag">PWA hors ligne</span>
-              <span class="p-tag">Mobile Money</span>
-            </div>
-          <div class="proj-links">
-              <a href="https://senbaobab.com" target="_blank" rel="noopener noreferrer" class="proj-link">Voir le site en ligne</a>
-          </div>
-          </div>
-        </div>
-
-        <div class="proj-card reveal">
-          <div class="proj-card-glow"></div>
-          <div class="proj-top"><span class="proj-num">03</span><span class="proj-domain">cliniquenaby.com</span></div>
-          <h3 class="proj-title">Clinique Naby</h3>
-          <p class="proj-desc">Site web, plateformes de facturation et de laboratoire, portail de suivi patient et plateforme complète de gestion de la clinique.</p>
-          <div class="proj-stack">
-            <span class="p-tag">Santé</span>
-            <span class="p-tag">Facturation</span>
-            <span class="p-tag">Laboratoire</span>
-            <span class="p-tag">Suivi patient</span>
-          </div>
-          <div class="proj-links">
-            <a href="https://cliniquenaby.com" target="_blank" rel="noopener noreferrer" class="proj-link">Site web</a>
-            <a href="https://suivi.cliniquenaby.com" target="_blank" rel="noopener noreferrer" class="proj-link">Suivi patient</a>
-            <a href="https://gestionclinique.cliniquenaby.com" target="_blank" rel="noopener noreferrer" class="proj-link">Gestion clinique</a>
-          </div>
-        </div>
-
-        <div class="proj-card reveal reveal-delay-1">
-          <div class="proj-card-glow"></div>
-          <div class="proj-top"><span class="proj-num">04</span><span class="proj-domain">lamadoneadn.com</span></div>
-          <h3 class="proj-title">Clinique La Madone ADN</h3>
-          <p class="proj-desc">Site web de la clinique et plateforme de gestion AdnSoins : administration, RH, comptabilité et facturation, gestion des rendez-vous.</p>
-          <div class="proj-stack">
-            <span class="p-tag">Santé</span>
-            <span class="p-tag">Site web</span>
-            <span class="p-tag">RH</span>
-            <span class="p-tag">Comptabilité</span>
-            <span class="p-tag">Rendez-vous</span>
-          </div>
-          <div class="proj-links">
-            <a href="https://lamadoneadn.com" target="_blank" rel="noopener noreferrer" class="proj-link">Site web</a>
-            <a href="https://adnsoins.lamadoneadn.com" target="_blank" rel="noopener noreferrer" class="proj-link">Plateforme AdnSoins</a>
-          </div>
-        </div>
-
-        <div class="proj-card reveal">
-          <div class="proj-card-glow"></div>
-          <div class="proj-top"><span class="proj-num">05</span><span class="proj-domain">cliniquemouhamedrassoul.com</span></div>
-          <h3 class="proj-title">Clinique Mouhamed Rassoul</h3>
-          <p class="proj-desc">Site web de la clinique et plateforme de facturation.</p>
-          <div class="proj-stack">
-            <span class="p-tag">Santé</span>
-            <span class="p-tag">Site web</span>
-            <span class="p-tag">Facturation</span>
-          </div>
-          <div class="proj-links">
-            <a href="https://cliniquemouhamedrassoul.com" target="_blank" rel="noopener noreferrer" class="proj-link">Site web</a>
-            <a href="https://facturation.cliniquemouhamedrassoul.com" target="_blank" rel="noopener noreferrer" class="proj-link">Plateforme de facturation</a>
-          </div>
-        </div>
-
-        <div class="proj-card reveal reveal-delay-1">
-          <div class="proj-card-glow"></div>
-          <div class="proj-top"><span class="proj-num">06</span><span class="proj-domain">cml-sst.com</span></div>
-          <h3 class="proj-title">Cabinet Lionel</h3>
-          <p class="proj-desc">Site web du cabinet et application de facturation sur mesure.</p>
-          <div class="proj-stack">
-            <span class="p-tag">Site web</span>
-            <span class="p-tag">Facturation</span>
-            <span class="p-tag">Application web</span>
-          </div>
-          <div class="proj-links">
-            <a href="https://cml-sst.com" target="_blank" rel="noopener noreferrer" class="proj-link">Site web</a>
-            <a href="https://cabinetlionel.cloud" target="_blank" rel="noopener noreferrer" class="proj-link">Application de facturation</a>
-          </div>
-        </div>
-
-        <div class="proj-card reveal">
-          <div class="proj-card-glow"></div>
-          <div class="proj-top"><span class="proj-num">07</span><span class="proj-domain">plateforme-sst.com</span></div>
-          <h3 class="proj-title">Plateforme SST</h3>
-          <p class="proj-desc">Plateforme de santé et sécurité au travail.</p>
-          <div class="proj-stack">
-            <span class="p-tag">Santé au travail</span>
-            <span class="p-tag">Sécurité</span>
-          </div>
-          <div class="proj-links">
-            <a href="https://plateforme-sst.com/" target="_blank" rel="noopener noreferrer" class="proj-link">Voir la plateforme</a>
-          </div>
-        </div>
-
-        <div class="proj-card reveal reveal-delay-1">
-          <div class="proj-card-glow"></div>
-          <div class="proj-top"><span class="proj-num">08</span><span class="proj-domain">gestionrh.cml-sst.com</span></div>
-          <h3 class="proj-title">Plateforme RH</h3>
-          <p class="proj-desc">Plateforme de gestion des ressources humaines.</p>
-          <div class="proj-stack">
-            <span class="p-tag">RH</span>
-            <span class="p-tag">Gestion du personnel</span>
-          </div>
-          <div class="proj-links">
-            <a href="https://gestionrh.cml-sst.com" target="_blank" rel="noopener noreferrer" class="proj-link">Voir la plateforme</a>
-          </div>
-        </div>
-
-        <div class="proj-card reveal">
-          <div class="proj-card-glow"></div>
-          <div class="proj-top"><span class="proj-num">09</span><span class="proj-domain">boucheriedaaradji.com</span></div>
-          <h3 class="proj-title">Boucherie Daaradji</h3>
-          <p class="proj-desc">Site e-commerce d'une boucherie halal premium avec commande en ligne, intégration WhatsApp et catalogue produits.</p>
-          <div class="proj-stack">
-            <span class="p-tag">E-commerce</span>
-            <span class="p-tag">SEO local</span>
-            <span class="p-tag">WhatsApp</span>
-          </div>
-          <div class="proj-links">
-            <a href="https://boucheriedaaradji.com/" target="_blank" rel="noopener noreferrer" class="proj-link">Voir le site en ligne</a>
-          </div>
-        </div>
-
-        <div class="proj-card reveal reveal-delay-1">
-          <div class="proj-card-glow"></div>
-          <div class="proj-top"><span class="proj-num">10</span><span class="proj-domain">talent-connect.fr</span></div>
-          <h3 class="proj-title">Talent Connect</h3>
-          <p class="proj-desc">Plateforme Talent Connect.</p>
-          <div class="proj-stack">
-            <span class="p-tag">Site web</span>
-          </div>
-          <div class="proj-links">
-            <a href="https://talent-connect.fr" target="_blank" rel="noopener noreferrer" class="proj-link">Voir le site en ligne</a>
-          </div>
-        </div>
-
-        <div class="proj-card reveal">
-          <div class="proj-card-glow"></div>
-          <div class="proj-top"><span class="proj-num">11</span><span class="proj-domain">ticmgroupe.com</span></div>
-          <h3 class="proj-title">TICM Groupe</h3>
-          <p class="proj-desc">Site vitrine d'une entreprise sénégalaise de tuyauterie industrielle et de charpente métallique, qui présente ses services et son expertise à sa clientèle professionnelle.</p>
-          <div class="proj-stack">
-            <span class="p-tag">Site vitrine</span>
-            <span class="p-tag">Industrie</span>
-          </div>
-          <div class="proj-links">
-            <a href="https://www.ticmgroupe.com/" target="_blank" rel="noopener noreferrer" class="proj-link">Voir le site en ligne</a>
-          </div>
-        </div>
-
-        <div class="proj-card reveal reveal-delay-1">
-          <div class="proj-card-glow"></div>
-          <div class="proj-top"><span class="proj-num">12</span><span class="proj-domain">thiamstreetwear.com</span></div>
-          <h3 class="proj-title">Thiam Streetwear</h3>
-          <p class="proj-desc">Boutique en ligne de streetwear à Dakar : plus de 500 produits (sneakers Nike, Adidas, Saucony, vêtements, accessoires), panier, paiements Wave et Orange Money, retrait en boutique ou livraison, support WhatsApp.</p>
-          <div class="proj-stack">
-            <span class="p-tag">E-commerce</span>
-            <span class="p-tag">Wave</span>
-            <span class="p-tag">Orange Money</span>
-            <span class="p-tag">WhatsApp</span>
-          </div>
-          <div class="proj-links">
-            <a href="https://thiamstreetwear.com/" target="_blank" rel="noopener noreferrer" class="proj-link">Voir le site en ligne</a>
-          </div>
-        </div>
-
-        <div class="proj-card reveal">
-          <div class="proj-card-glow"></div>
-          <div class="proj-top"><span class="proj-num">13</span><span class="proj-domain">billeteriecjics.com</span></div>
-          <h3 class="proj-title">Billetterie CJICS</h3>
-          <p class="proj-desc">Plateforme de billetterie en ligne pour le concert de Dip Doundou Guiss à Mboro.</p>
-          <div class="proj-stack">
-            <span class="p-tag">Billetterie</span>
-            <span class="p-tag">Événementiel</span>
-          </div>
-          <div class="proj-links">
-            <a href="https://billeteriecjics.com/" target="_blank" rel="noopener noreferrer" class="proj-link">Voir le site en ligne</a>
-          </div>
-        </div>
-
-      </div>
-
-      <h3 class="projects-sub">Projets personnels &amp; académiques</h3>
-      <div class="projects-grid compact">
-
-        <div class="proj-card reveal">
-          <div class="proj-card-glow"></div>
-          <div class="proj-top"><span class="proj-num">14</span></div>
-          <h3 class="proj-title">Smart Bétail</h3>
-          <p class="proj-desc">Plateforme web et mobile de gestion de bétail : suivi sanitaire, généalogie, géolocalisation et gestion des ventes.</p>
-          <div class="proj-stack">
-            <span class="p-tag">React Native</span>
-            <span class="p-tag">Django</span>
-            <span class="p-tag">PostgreSQL</span>
-            <span class="p-tag">scikit-learn</span>
-          </div>
-        </div>
-
-        <div class="proj-card reveal reveal-delay-1">
-          <div class="proj-card-glow"></div>
-          <div class="proj-top"><span class="proj-num">15</span></div>
-          <h3 class="proj-title">Prévision Budgétaire Communale</h3>
-          <p class="proj-desc">Prédiction des recettes et dépenses annuelles des communes par Machine Learning, à partir de séries historiques.</p>
-          <div class="proj-stack">
-            <span class="p-tag">Python</span>
-            <span class="p-tag">scikit-learn</span>
-            <span class="p-tag">Pandas</span>
-          </div>
-        </div>
-
-        <div class="proj-card reveal">
-          <div class="proj-card-glow"></div>
-          <div class="proj-top"><span class="proj-num">16</span></div>
-          <h3 class="proj-title">SamaTerre</h3>
-          <p class="proj-desc">Plateforme web et mobile de vente immobilière et foncière : annonces, messagerie, géolocalisation des biens et paiement Wave.</p>
-          <div class="proj-stack">
-            <span class="p-tag">React.js</span>
-            <span class="p-tag">Django</span>
-            <span class="p-tag">PostgreSQL</span>
-          </div>
-        </div>
-
-        <div class="proj-card reveal reveal-delay-1">
-          <div class="proj-card-glow"></div>
-          <div class="proj-top"><span class="proj-num">17</span></div>
-          <h3 class="proj-title">AgriConnect — Hackathon ISEP 2024</h3>
-          <p class="proj-desc">Application de mise en relation des acteurs agricoles avec chatbot multilingue.</p>
-          <div class="proj-stack">
-            <span class="p-tag">Flutter</span>
-            <span class="p-tag">NLP</span>
-            <span class="p-tag">Firebase</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CERTIFICATIONS ===== -->
-  <section id="certifications">
-    <div class="section-wrap alt">
-      <div class="s-label">Certifications</div>
-      <h2 class="s-title">Diplômes, certifications &amp; badges</h2>
-      <div class="certs-grid">
-
-        <div class="cert-card featured reveal">
-          <div class="cert-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
-          <div>
-            <h3 class="cert-title">Technicien Supérieur en Analyse de Performance Digitale</h3>
-            <div class="cert-issuer">ISEP Diamniadio — 2024 – 2026</div>
-            <p class="cert-desc">Formation de technicien supérieur à l'Institut Supérieur d'Enseignement Professionnel de Diamniadio.</p>
-          </div>
-        </div>
-
-        <div class="cert-card reveal reveal-delay-1">
-          <div class="cert-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg></div>
-          <div>
-            <h3 class="cert-title">Marketing Digital</h3>
-            <div class="cert-issuer">UVS — Université Virtuelle Cheikh Hamidou Kane</div>
-            <p class="cert-desc">Maîtrise des stratégies de marketing digital, SEO, SEA, gestion des réseaux sociaux et analyse de données pour optimiser la présence en ligne.</p>
-          </div>
-        </div>
-
-        <div class="cert-card reveal reveal-delay-2">
-          <div class="cert-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></svg></div>
-          <div>
-            <h3 class="cert-title">Intelligence Artificielle</h3>
-            <div class="cert-issuer">UVS — Université Virtuelle Cheikh Hamidou Kane</div>
-            <p class="cert-desc">Formation complète en IA incluant machine learning, NLP, traitement de données et déploiement de modèles en production.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <h3 class="projects-sub">Badges SAP Learning</h3>
-      <div class="certs-grid" style="margin-top:0;">
-
-        <div class="cert-card reveal">
-          <div class="cert-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg></div>
-          <div>
-            <h3 class="cert-title">Developing UIs with SAPUI5</h3>
-            <div class="cert-issuer">SAP Learning — 26 octobre 2026</div>
-            <p class="cert-desc">Cours terminé, niveau intermédiaire, 11 h 21.</p>
-          </div>
-          <div class="proj-links">
-            <a href="https://badger.learning.sap.com/verify/xidyk-fatum-burol-vyhim-gobys" target="_blank" rel="noopener noreferrer" class="proj-link">Vérifier le badge</a>
-          </div>
-        </div>
-
-        <div class="cert-card reveal reveal-delay-1">
-          <div class="cert-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg></div>
-          <div>
-            <h3 class="cert-title">Advanced SAPUI5 Development</h3>
-            <div class="cert-issuer">SAP Learning — 28 octobre 2026</div>
-            <p class="cert-desc">Cours terminé, niveau intermédiaire, 8 h 42.</p>
-          </div>
-          <div class="proj-links">
-            <a href="https://badger.learning.sap.com/verify/xydun-tivul-fitus-regun-vypyv" target="_blank" rel="noopener noreferrer" class="proj-link">Vérifier le badge</a>
-          </div>
-        </div>
-
-        <div class="cert-card reveal reveal-delay-2">
-          <div class="cert-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg></div>
-          <div>
-            <h3 class="cert-title">Developing an SAP Fiori Elements App Based on a CAP OData V4 Service</h3>
-            <div class="cert-issuer">SAP Learning — 30 octobre 2026</div>
-            <p class="cert-desc">Cours terminé, niveau intermédiaire, 3 h 40.</p>
-          </div>
-          <div class="proj-links">
-            <a href="https://badger.learning.sap.com/verify/xebul-dusih-ganot-sykyd-cepyt" target="_blank" rel="noopener noreferrer" class="proj-link">Vérifier le badge</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CONTACT ===== -->
-  <section id="contact">
-    <div class="section-wrap">
-      <div class="contact-shell">
-      <div class="contact-grid">
-
-        <div class="reveal">
-          <div class="s-label">Contact</div>
-          <h2 class="s-title">Travaillons<br>ensemble</h2>
-          <p class="s-desc">Vous avez un projet en tête ? Une idée à développer ? N'hésitez pas à me contacter, je serai ravi d'échanger avec vous.</p>
-
-          <div class="contact-items">
-            <div class="contact-row">
-              <div class="c-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
-              <div>
-                <span class="c-label">Email</span>
-                <a href="mailto:Bossendoye0@gmail.com" class="c-val">Bossendoye0@gmail.com</a>
-              </div>
-            </div>
-            <div class="contact-row">
-              <div class="c-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-              <div>
-                <span class="c-label">Téléphone</span>
-                <a href="tel:+221781576224" class="c-val">+221 78 157 62 24</a>
-              </div>
-            </div>
-            <div class="contact-row">
-              <div class="c-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
-              <div>
-                <span class="c-label">LinkedIn</span>
-                <a href="https://www.linkedin.com/in/momar-bosse-ndoye" target="_blank" rel="noopener noreferrer" class="c-val">linkedin.com/in/momar-bosse-ndoye</a>
-              </div>
-            </div>
-            <div class="contact-row">
-              <div class="c-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-              <div>
-                <span class="c-label">Localisation</span>
-                <span class="c-val">Dakar, Sénégal</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-form-box reveal reveal-delay-2">
-          <h3 class="form-box-title">Envoyer un message</h3>
-          <p class="form-box-sub">Je vous répondrai dans les plus brefs délais.</p>
-          <form id="contactForm" novalidate>
-            <div class="fg">
-              <label for="name">Nom complet</label>
-              <input id="name" type="text" placeholder="Votre nom" required autocomplete="name">
-            </div>
-            <div class="fg">
-              <label for="email">Adresse email</label>
-              <input id="email" type="email" placeholder="votre@email.com" required autocomplete="email">
-            </div>
-            <div class="fg">
-              <label for="message">Message</label>
-              <textarea id="message" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
-            </div>
-            <button type="submit" class="form-btn" id="submitBtn">Envoyer le message</button>
-          </form>
-        </div>
-
-      </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="footer-copy">
-      © 2026 <strong>Momar Bosse Ndoye</strong>. Tous droits réservés.
-    </div>
-    <nav class="footer-nav" aria-label="Footer navigation">
-      <a href="#about">À propos</a>
-      <a href="#projects">Projets</a>
-      <a href="mailto:Bossendoye0@gmail.com">Email</a>
-      <a href="#hero">↑ Haut</a>
-    </nav>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
+
 </html>
