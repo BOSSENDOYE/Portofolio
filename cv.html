@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    
+    <title>CV Momar Bosse Ndoye - Consultant SAP ABAP | Développeur Web & Mobile Full-Stack</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <meta name="description" content="CV de Momar Bosse Ndoye, Consultant SAP ABAP junior (SAP Fiori) et Développeur Web & Mobile Full-Stack à Dakar, Sénégal. Plus de 15 applications clientes en production, Docker, Nginx, React, Django, Laravel.">
+
+    <!-- Aperçu lors du partage (WhatsApp, LinkedIn, Facebook, X) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://momarbossndoye.onrender.com/cv.html">
+    <meta property="og:title" content="CV — Momar Bosse Ndoye, Consultant SAP ABAP Junior &amp; Développeur Full Stack">
+    <meta property="og:description" content="Consultant SAP ABAP Junior (SAP Fiori) et Développeur Web &amp; Mobile Full Stack à Dakar. Plus de 15 applications clientes en production.">
+    <meta property="og:image" content="https://momarbossndoye.onrender.com/images/profile.jpg">
+    <meta property="og:image:width" content="358">
+    <meta property="og:image:height" content="514">
+    <meta property="og:image:alt" content="Photo de Momar Bosse Ndoye">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Momar Bosse Ndoye">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CV — Momar Bosse Ndoye, Consultant SAP ABAP Junior &amp; Développeur Full Stack">
+    <meta name="twitter:description" content="Consultant SAP ABAP Junior (SAP Fiori) et Développeur Web &amp; Mobile Full Stack à Dakar. Plus de 15 applications clientes en production.">
+    <meta name="twitter:image" content="https://momarbossndoye.onrender.com/images/profile.jpg">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .cv-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .cv-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #4fc3f7, #03a9f4, #0288d1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #0a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid #16213e;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #4fc3f7, #03a9f4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+        
+        .header h2 {
+            font-size: 1.4em;
+            color: #b0bec5;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.1);
+            padding: 10px 15px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: rgba(79, 195, 247, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .contact-item strong {
+            font-size: 1.2em;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section h3 {
+            color: #0a1a2e;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .section h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 30px;
+            background: linear-gradient(45deg, #4fc3f7, #03a9f4);
+            border-radius: 2px;
+        }
+        
+        .profile {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #4fc3f7;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .profile p {
+            font-size: 1.1em;
+            color: #495057;
+            text-align: justify;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(79, 195, 247, 0.15);
+        }
+        
+        .skill-category h4 {
+            color: #4fc3f7;
+            margin: 0 0 15px 0;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tag {
+            background: linear-gradient(45deg, #4fc3f7, #03a9f4);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(79, 195, 247, 0.3);
+        }
+        
+        .experience-item, .project-item {
+            margin-bottom: 25px;
+            padding: 25px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid #4fc3f7;
+            transition: all 0.3s ease;
+        }
+        
+        .experience-item:hover, .project-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 25px rgba(79, 195, 247, 0.15);
+        }
+        
+        .experience-item h4, .project-item h4 {
+            color: #0a1a2e;
+            margin: 0 0 8px 0;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .experience-item .company, .project-item .technologies {
+            color: #4fc3f7;
+            font-weight: 500;
+            margin-bottom: 15px;
+            font-size: 1em;
+        }
+        
+        .experience-item ul, .project-item ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .experience-item li, .project-item li {
+            margin-bottom: 8px;
+            color: #495057;
+        }
+        
+        .certification-item {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid #28a745;
+            transition: all 0.3s ease;
+        }
+        
+        .certification-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.15);
+        }
+        
+        .certification-item h4 {
+            color: #28a745;
+            margin: 0 0 8px 0;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        
+        .interests {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #ffc107;
+        }
+        
+        .interests ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .interests li {
+            background: white;
+            margin: 10px 0;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            color: #495057;
+            font-weight: 500;
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .interests li::before {
+            content: '✨';
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #4fc3f7, #03a9f4);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(79, 195, 247, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .print-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
+        }
+        
+        @media print {
+            body { 
+                background: white; 
+                padding: 0; 
+            }
+            .cv-container { 
+                box-shadow: none; 
+                border-radius: 0;
+            }
+            .print-button { 
+                display: none; 
+            }
+            .section { 
+                page-break-inside: avoid; 
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2.2em; }
+            .contact-info { grid-template-columns: 1fr; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .content { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button" onclick="window.print()">🖨️ Imprimer</button>
+    
+    <div class="cv-container">
+        <div class="header">
+            <h1>Momar Bosse Ndoye</h1>
+            <h2>Consultant SAP ABAP | Développeur Web & Mobile Full-Stack</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>📧</strong> Bossendoye0@gmail.com
+                </div>
+                <div class="contact-item">
+                    <strong>📱</strong> +221 78 157 62 24
+                </div>
+                <div class="contact-item">
+                    <strong>📍</strong> Dakar, Sénégal
+                </div>
+                <div class="contact-item">
+                    <strong>💼</strong> linkedin.com/in/momar-bosse-ndoye
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+
+    <div class="section">
+        <h3>Résumé professionnel</h3>
+        <div class="profile">
+            <p>Consultant SAP ABAP junior et développeur Full-Stack agile, avec une expérience concrète du développement d'applications <strong>SAP Fiori</strong> avec SAPUI5, de modèles de données en CDS Views et de services OData. Combine de solides compétences back-end et front-end (JavaScript, Python, PHP) avec une capacité éprouvée à gérer une infrastructure, conteneuriser des applications avec <strong>Docker</strong> et accompagner des transformations numériques d'entreprise. À l'aise pour piloter le développement de bout en bout de modules web, mobiles et ERP, en garantissant une disponibilité élevée et des solutions techniques sur mesure. Recherche un poste stimulant au sein d'une entreprise exploitant les écosystèmes SAP.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Expérience professionnelle</h3>
+        <div class="experience-item">
+            <h4>Consultant SAP Junior (Stagiaire)</h4>
+            <div class="company">SAB Business Consulting – Dakar, Sénégal | Juillet 2026 – Présent</div>
+            <ul>
+                <li>Développement de list reports avec SAP Fiori, en complément du développement SAP ABAP, au sein de l'équipe de consulting</li>
+                <li>Développement et optimisation de requêtes complexes et de modèles de données modernes via les CDS Views (Core Data Services)</li>
+                <li>Conception, exposition et maintenance d'API de communication via les services OData</li>
+                <li>Développement d'applications et de requêtes personnalisées sur l'interface SAP Fiori en exploitant le framework SAPUI5</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <h4>Développeur Web Full-Stack — Freelance</h4>
+            <div class="company">Secteur médical et commercial – Sénégal | Décembre 2025 – Présent</div>
+            <ul>
+                <li>Gestion et optimisation d'un environnement VPS Hostinger sécurisé, hébergeant plus de 15 applications clientes en production conteneurisées via Docker et Nginx, garantissant une disponibilité maximale</li>
+                <li><strong>SenBaobab</strong> (senbaobab.com) : suite de gestion commerciale — point de vente, gestion des stocks, CRM/fidélité, module restaurant, comptabilité SYSCOHADA, PWA hors ligne, Mobile Money</li>
+                <li><strong>Clinique La Madone ADN</strong> : site web (lamadoneadn.com) et plateforme AdnSoins (adnsoins.lamadoneadn.com) pour l’administration, la RH, la comptabilité/facturation et la gestion des rendez-vous</li>
+                <li><strong>Clinique Naby</strong> (cliniquenaby.com) : site web, plateformes de facturation et de laboratoire, portail de suivi patient (suivi.cliniquenaby.com) et plateforme complète de gestion de la clinique (gestionclinique.cliniquenaby.com)</li>
+                <li><strong>Clinique Mouhamed Rassoul</strong> : site web (cliniquemouhamedrassoul.com) et plateforme de facturation (facturation.cliniquemouhamedrassoul.com)</li>
+                <li><strong>Cabinet Lionel</strong> : site web (cml-sst.com) et application de facturation (cabinetlionel.cloud)</li>
+                <li><strong>BoutickSen</strong> (bouticksen.com) : plateforme SaaS permettant à des commerçants de créer leur boutique en ligne en 5 minutes, avec gestion des produits/commandes et paiements Wave & Orange Money</li>
+                <li><strong>Autres projets :</strong> site de la Boucherie Daaradji (boucheriedaaradji.com) ; plateforme SST santé et sécurité au travail (plateforme-sst.com) ; plateforme RH (gestionrh.cml-sst.com) ; Talent Connect (talent-connect.fr) ; site de TICM Groupe, tuyauterie industrielle et charpente métallique (ticmgroupe.com) ; boutique e-commerce Thiam Streetwear avec paiements Wave &amp; Orange Money (thiamstreetwear.com) ; billetterie en ligne CJICS pour le concert de Dip Doundou Guiss à Mboro (billeteriecjics.com)</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <h4>Stagiaire Développement Web & Mobile</h4>
+            <div class="company">Siribra – Dakar, Sénégal | Juin 2025 – Octobre 2025</div>
+            <ul>
+                <li>Participation à la conception et au développement d'applications web et mobiles au sein de l'équipe de développement</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <h4>Stagiaire Réseaux & Informatique</h4>
+            <div class="company">Industrie Chimique du Sénégal – Thiès, Sénégal | Décembre 2024 – Janvier 2025</div>
+            <ul>
+                <li>Contribution à la maintenance de l'infrastructure réseau et des systèmes informatiques de l'entreprise</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Formation</h3>
+        <div class="certification-item">
+            <h4>Technicien Supérieur en Analyse de Performance Digitale</h4>
+            <p>ISEP Diamniadio | 2024 – 2026</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Certifications</h3>
+        <div class="certification-item">
+            <h4>Marketing Digital</h4>
+            <p>Université Virtuelle du Sénégal (Université Virtuelle Cheikh Hamidou Kane)</p>
+        </div>
+        <div class="certification-item">
+            <h4>Intelligence Artificielle</h4>
+            <p>Université Virtuelle du Sénégal (Université Virtuelle Cheikh Hamidou Kane)</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Badges SAP Learning</h3>
+        <div class="certification-item">
+            <h4>Developing UIs with SAPUI5</h4>
+            <p>SAP Learning | 26 octobre 2026 | <a href="https://badger.learning.sap.com/verify/xidyk-fatum-burol-vyhim-gobys">Vérifier le badge</a></p>
+        </div>
+        <div class="certification-item">
+            <h4>Advanced SAPUI5 Development</h4>
+            <p>SAP Learning | 28 octobre 2026 | <a href="https://badger.learning.sap.com/verify/xydun-tivul-fitus-regun-vypyv">Vérifier le badge</a></p>
+        </div>
+        <div class="certification-item">
+            <h4>Developing an SAP Fiori Elements App Based on a CAP OData V4 Service</h4>
+            <p>SAP Learning | 30 octobre 2026 | <a href="https://badger.learning.sap.com/verify/xebul-dusih-ganot-sykyd-cepyt">Vérifier le badge</a></p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Compétences clés</h3>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Langages de programmation</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">PHP</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Frameworks</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">React.js</span>
+                    <span class="skill-tag">React Native</span>
+                    <span class="skill-tag">Angular</span>
+                    <span class="skill-tag">Django</span>
+                    <span class="skill-tag">Flask</span>
+                    <span class="skill-tag">Flutter</span>
+                    <span class="skill-tag">Symfony</span>
+                    <span class="skill-tag">Laravel</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Bases de données</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">Firebase</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>ERP</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">SAP ABAP</span>
+                    <span class="skill-tag">SAP Fiori (list reports)</span>
+                    <span class="skill-tag">SAPUI5</span>
+                    <span class="skill-tag">Fiori Elements</span>
+                    <span class="skill-tag">CAP</span>
+                    <span class="skill-tag">OData V4</span>
+                    <span class="skill-tag">OData Services</span>
+                    <span class="skill-tag">ABAP CDS Views</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Infrastructure</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Nginx</span>
+                    <span class="skill-tag">Administration VPS (Hostinger)</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Outils & Automatisation</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">N8N</span>
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">WordPress</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Données & IA</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">scikit-learn</span>
+                    <span class="skill-tag">NLP (spaCy, Transformers)</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Marketing Digital</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Google Ads</span>
+                    <span class="skill-tag">Bing Ads</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Langues</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Français (langue maternelle)</span>
+                    <span class="skill-tag">Anglais (bon niveau opérationnel)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </div>
+</body>
+</html>

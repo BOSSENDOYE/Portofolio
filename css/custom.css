@@ -1,0 +1,47 @@
+/* Momar Bosse Ndoye: additions to the Ashley theme */
+/* The dark sections invert what sits behind them, so the logo needs its own layer above them */
+.mb-brand { position: fixed; top: 40px; left: 60px; z-index: 5; }
+.mil-logo img { display: block; width: 118px; height: auto; border-radius: 9px; }
+.mb-brand-space { display: block; width: 118px; height: 61px; }
+.mb-footer-logo { display: block; width: 240px; max-width: 100%; height: auto; border-radius: 10px; }
+
+.mil-portfolio-item .mil-cover img,
+.mil-image-frame > img { object-position: top center; }
+
+.mb-status { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 30px; font-size: 13px; letter-spacing: 1px; color: rgba(255, 255, 255, .8); }
+.mb-status i { width: 8px; height: 8px; border-radius: 50%; background: #34d399; }
+
+.mb-stats { display: flex; flex-wrap: wrap; gap: 30px 50px; }
+.mb-stat-n { display: block; font-size: 42px; font-weight: 500; line-height: 1.1; color: rgb(139, 92, 246); }
+.mb-stat-l { display: block; max-width: 130px; font-size: 13px; line-height: 1.4; }
+
+.mb-client { display: block; text-align: center; font-size: 17px; font-weight: 500; white-space: nowrap; color: rgba(7, 11, 20, .6); }
+.mil-infinite-show .swiper-wrapper { transition-timing-function: linear; }
+
+.mb-card { height: 100%; padding: 40px; border-radius: 6px; background: #fff; }
+.mb-card p { font-size: 15px; }
+.mb-small { font-size: 12px; letter-spacing: 1.5px; }
+
+.mb-tags { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; }
+.mb-tags li { padding: 6px 13px; border-radius: 40px; font-size: 13px; line-height: 1.4; background: rgba(139, 92, 246, .14); color: rgb(7, 11, 20); }
+.mb-tags-dark li { background: rgba(255, 255, 255, .08); color: rgba(255, 255, 255, .85); }
+
+.mb-exp { padding: 50px 0; border-top: 1px solid rgba(7, 11, 20, .1); }
+.mb-list { padding: 0; margin: 0; list-style: none; }
+.mb-list li { position: relative; padding-left: 22px; margin-bottom: 10px; }
+.mb-list li:before { content: ""; position: absolute; left: 0; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: rgb(139, 92, 246); }
+
+.mb-buttons { display: flex; flex-wrap: wrap; gap: 15px; }
+.mb-phone { max-width: 340px; margin: 0 auto; overflow: hidden; border-radius: 22px; border: 8px solid rgb(7, 11, 20); }
+.mb-phone img { display: block; width: 100%; height: auto; }
+
+.mb-right { text-align: right; }
+@media screen and (max-width: 1200px) {
+    .mb-brand { top: 19px; left: 30px; z-index: 1000; }
+    .mil-logo img { width: 100px; border-radius: 8px; }
+    .mb-brand-space { width: 100px; height: 52px; }
+}
+@media screen and (max-width: 768px) {
+    .mb-right { text-align: left; }
+    .mb-card { padding: 30px; }
+}
