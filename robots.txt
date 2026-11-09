@@ -1,4 +1,8 @@
 User-agent: *
+Allow: /
 Disallow: /.git/
 Disallow: /.vscode/
 Disallow: /node_modules/
+Disallow: /Portofolio/
+
+Sitemap: https://momarbossndoye.onrender.com/sitemap.xml
